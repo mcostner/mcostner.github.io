@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mike Costner | Cybersecurity Portfolio</title>
   <style>
+    * {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -12,14 +16,41 @@
       color: #c9d1d9;
     }
 
+    /* Navigation Bar */
+    nav {
+      background-color: #161b22;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #30363d;
+    }
+
+    nav a {
+      color: #c9d1d9;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #58a6ff;
+    }
+
+    /* Header / Hero */
     header {
       background-color: #161b22;
-      padding: 3rem 2rem;
+      padding: 3rem 2rem 2rem 2rem;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
       gap: 2rem;
+      text-align: left;
     }
 
     .profile-img {
@@ -28,11 +59,6 @@
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid #58a6ff;
-    }
-
-    .hero-text {
-      max-width: 600px;
-      text-align: left;
     }
 
     .hero-text h1 {
@@ -54,14 +80,9 @@
       font-size: 1rem;
       font-weight: 500;
       color: #8b949e;
-      transition: color 0.3s ease, text-decoration 0.3s ease;
     }
 
-    .hero-text p:hover {
-      color: #58a6ff;
-      text-decoration: underline;
-    }
-
+    /* Content */
     .container {
       max-width: 900px;
       margin: 2rem auto;
@@ -99,6 +120,16 @@
 </head>
 <body>
 
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Header Section -->
   <header>
     <img src="mike_circular.png" alt="Mike Costner" class="profile-img" />
     <div class="hero-text">
@@ -108,7 +139,8 @@
     </div>
   </header>
 
-  <div class="container">
+  <!-- Main Content -->
+  <div class="container" id="about">
     <h2>About Me</h2>
     <p><strong>Technology should work for you, not against you. I help businesses stay secure and operate more efficiently every single day.</strong></p>
     <p>I’m a cybersecurity advocate and seasoned IT professional with over 30 years of experience in systems engineering, network security, and technical support. From small businesses to large enterprises, I’ve helped organizations navigate the evolving tech landscape with clarity, reliability, and a security-first mindset.</p>
@@ -117,8 +149,10 @@
     <p>I’m currently completing my B.S. in Cybersecurity and Information Assurance, with a focused track in threat detection, incident response, and regulatory compliance. I hold certifications including <strong>CompTIA CySA+</strong>, <strong>Security+</strong>, and <strong>ITIL 4 Foundations</strong>, and I’m preparing for the <strong>(ISC)² SSCP</strong> to deepen my expertise in security operations.</p>
     <p>I’m currently pursuing my <strong>(ISC)² SSCP</strong> certification, with a clear progression toward the <strong>CCSP</strong>, <strong>CISM</strong>, <strong>CISA</strong>, and ultimately the <strong>CISSP</strong>. This path reflects my commitment to mastering both the operational and governance aspects of cybersecurity, building a well-rounded foundation for future security leadership roles.</p>
     <p>My long-term goal is to step into a strategic leadership role as a <strong>Chief Information Security Officer (CISO)</strong> by blending technical excellence with a people-first approach to governance, risk management, and organizational resilience.</p>
+  </div>
 
-    <h2>Specialties</h2>
+  <div class="container" id="skills">
+    <h2>Skills</h2>
     <ul>
       <li>Cybersecurity and Threat Detection</li>
       <li>SIEM and Endpoint Security</li>
@@ -129,7 +163,9 @@
       <li>Customer-Focused MSP Support</li>
       <li>Secure Infrastructure Planning</li>
     </ul>
+  </div>
 
+  <div class="container" id="certifications">
     <h2>Certifications</h2>
 
     <h3>Foundational</h3>
@@ -156,14 +192,18 @@
       <li>ISACA CISA – Planned</li>
       <li>(ISC)² CISSP – Planned</li>
     </ul>
+  </div>
 
+  <div class="container" id="projects">
     <h2>Projects</h2>
     <ul>
       <li><a href="#">Autopsy Digital Forensics Report</a></li>
       <li><a href="#">Wireshark Traffic Analysis</a></li>
       <li><a href="#">SentinelOne Endpoint Review</a></li>
     </ul>
+  </div>
 
+  <div class="container" id="contact">
     <h2>Contact</h2>
     <p>📧 <a href="mailto:mike@example.com">mike@example.com</a><br>
        🔗 <a href="https://www.linkedin.com/in/mikecostner" target="_blank">LinkedIn Profile</a></p>
