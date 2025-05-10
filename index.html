@@ -14,27 +14,50 @@
 
     header {
       background-color: #161b22;
-      padding: 2rem;
-      text-align: center;
+      padding: 3rem 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
     }
 
-    header h1 {
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #58a6ff;
+    }
+
+    .hero-text {
+      max-width: 600px;
+      text-align: left;
+    }
+
+    .hero-text h1 {
       margin: 0;
       font-size: 2.5rem;
       color: #58a6ff;
     }
 
-    header p {
-      margin-top: 0.5rem;
-      font-size: 1.1rem;
-      font-weight: 500;
-      letter-spacing: 0.3px;
-      color: #8b949e;
-      transition: color 0.3s ease, text-decoration 0.3s ease;
-      cursor: default;
+    .hero-text h2 {
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+      color: #c9d1d9;
+      font-weight: 400;
+      letter-spacing: 1px;
     }
 
-    header p:hover {
+    .hero-text p {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #8b949e;
+      transition: color 0.3s ease, text-decoration 0.3s ease;
+    }
+
+    .hero-text p:hover {
       color: #58a6ff;
       text-decoration: underline;
     }
@@ -54,6 +77,11 @@
       padding-bottom: 0.5rem;
     }
 
+    h3 {
+      color: #c9d1d9;
+      margin-top: 1.5rem;
+    }
+
     a {
       color: #58a6ff;
       text-decoration: none;
@@ -70,9 +98,14 @@
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Mike Costner</h1>
-    <p>Threat Detection | SIEM Analysis | Incident Response | GRC Minded | CISO Path</p>
+    <img src="mike_circular.png" alt="Mike Costner" class="profile-img" />
+    <div class="hero-text">
+      <h1>Mike Costner</h1>
+      <h2>Cybersecurity Advocate & IT Systems Engineer</h2>
+      <p>Threat Detection | SIEM Analysis | Incident Response | GRC Minded | CISO Path</p>
+    </div>
   </header>
 
   <div class="container">
@@ -95,6 +128,33 @@
       <li>Compliance Frameworks (NIST, HIPAA, ISO)</li>
       <li>Customer-Focused MSP Support</li>
       <li>Secure Infrastructure Planning</li>
+    </ul>
+
+    <h2>Certifications</h2>
+
+    <h3>Foundational</h3>
+    <ul>
+      <li>CompTIA A+</li>
+      <li>CompTIA Network+</li>
+      <li>HDI Support Center Analyst</li>
+      <li>LPI Linux Essentials</li>
+    </ul>
+
+    <h3>Operational</h3>
+    <ul>
+      <li>CompTIA Security+</li>
+      <li>CompTIA CySA+ (Cybersecurity Analyst)</li>
+      <li>CompTIA Project+</li>
+      <li>ITIL 4 Foundations</li>
+    </ul>
+
+    <h3>In Progress / Planned</h3>
+    <ul>
+      <li>(ISC)² SSCP – In Progress</li>
+      <li>(ISC)² CCSP – Planned</li>
+      <li>ISACA CISM – Planned</li>
+      <li>ISACA CISA – Planned</li>
+      <li>(ISC)² CISSP – Planned</li>
     </ul>
 
     <h2>Projects</h2>
