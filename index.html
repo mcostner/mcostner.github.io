@@ -45,6 +45,8 @@ body {
       color: #58a6ff;
     }
 
+    
+    
     header {
       background-color: #161b22;
       padding: 3rem 2rem 2rem 2rem;
@@ -118,6 +120,16 @@ body {
       list-style-type: disc;
       padding-left: 1.5rem;
     }
+        @media (max-width: 768px) {
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        margin: 0.5rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -139,7 +151,7 @@ body {
     <img src="mike_circular.png" alt="Mike Costner" class="profile-img" />
     <div class="hero-text">
       <h1>Mike Costner</h1>
-      <h2>Cybersecurity Advocate & IT Systems Engineer</h2>
+      <h2>Cybersecurity Systems Engineer</h2>
       <p>Threat Detection | SIEM Analysis | Incident Response | GRC Minded | CISO Path</p>
     </div>
   </header>
