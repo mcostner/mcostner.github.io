@@ -21,7 +21,7 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "ExoSentinel",
-    "url": "https://example.github.io/exosentinel/",
+    "url": "https://exosentinel.com",
     "logo": "https://dummyimage.com/512x512/0b1020/ffffff&text=E",
     "sameAs": [
       "https://www.linkedin.com/company/exosentinel"
@@ -33,6 +33,20 @@
     .glass { background: rgba(255, 255, 255, 0.06); backdrop-filter: blur(10px); }
     .gradient { background: radial-gradient(60% 80% at 50% 0%, rgba(32,120,255,0.15), transparent 60%), linear-gradient(180deg, #0b1020 0%, #0b1020 60%, #0f1b3a 100%); }
     a, button { transition: all 0.25s ease; }
+
+    /* Turn nav links into button-style on hover (Contact stays as-is) */
+    nav.main a.nav-link {
+      padding: 0.5rem 0.75rem;        /* prevent layout shift */
+      border-radius: 0.75rem;
+      transition: background-color .2s ease, color .2s ease, transform .2s ease;
+    }
+    nav.main a.nav-link:hover,
+    nav.main a.nav-link:focus-visible {
+      background-color: #0284c7;      /* tailwind sky-600 */
+      color: #0b1020;                  /* matches your button text color */
+      transform: translateY(-1px);
+      outline: none;
+    }
   </style>
 </head>
 <body class="bg-[#0b1020] text-slate-100 font-[Inter]">
@@ -45,11 +59,11 @@
         </div>
         <span class="text-lg sm:text-xl font-extrabold tracking-tight">EXOSENTINEL</span>
       </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#services" class="hover:text-white/90">Services</a>
-        <a href="#case-study" class="hover:text-white/90">Case Study</a>
-        <a href="#breakfast" class="hover:text-white/90">CyberBreakfast</a>
-        <a href="#about" class="hover:text-white/90">About</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm main">
+        <a href="#services" class="nav-link hover:text-white/90">Services</a>
+        <a href="#case-study" class="nav-link hover:text-white/90">Case Study</a>
+        <a href="#breakfast" class="nav-link hover:text-white/90">CyberBreakfast</a>
+        <a href="#about" class="nav-link hover:text-white/90">About</a>
         <a href="#contact" class="rounded-xl bg-sky-600 hover:bg-sky-800 text-[#0b1020] font-semibold px-4 py-2">Contact</a>
       </nav>
     </div>
@@ -166,40 +180,39 @@
     </div>
   </section>
 
-<!-- Certifications & Credentials -->
-<section id="certifications" class="py-20 border-t border-white/5">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-extrabold">Certifications &amp; Credentials</h2>
-    <p class="mt-3 text-slate-300">Professional certifications that demonstrate expertise and commitment to best practices.</p>
+  <!-- Certifications & Credentials -->
+  <section id="certifications" class="py-20 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold">Certifications &amp; Credentials</h2>
+      <p class="mt-3 text-slate-300">Professional certifications that demonstrate expertise and commitment to best practices.</p>
 
-    <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6">
-      <!-- CySA+ -->
-      <div class="glass rounded-3xl p-6 border border-white/10 flex items-center justify-center"
-           data-aos="fade-up" data-aos-delay="0">
-        <img src="images/CySAPlus_ce_certified_Logo_WHITE.png" alt="CompTIA CySA+ Certified" class="max-h-32 w-auto" />
-      </div>
+      <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6">
+        <!-- CySA+ -->
+        <div class="glass rounded-3xl p-6 border border-white/10 flex items-center justify-center"
+             data-aos="fade-up" data-aos-delay="0">
+          <img src="images/CySAPlus_ce_certified_Logo_WHITE.png" alt="CompTIA CySA+ Certified" class="max-h-32 w-auto" />
+        </div>
 
-      <!-- Security+ -->
-      <div class="glass rounded-3xl p-6 border border-white/10 flex items-center justify-center"
-           data-aos="fade-up" data-aos-delay="100">
-        <img src="images/SecurityPlus_Logo_Certified_CE_White.png" alt="CompTIA Security+ Certified" class="max-h-32 w-auto" />
-      </div>
+        <!-- Security+ -->
+        <div class="glass rounded-3xl p-6 border border-white/10 flex items-center justify-center"
+             data-aos="fade-up" data-aos-delay="100">
+          <img src="images/SecurityPlus_Logo_Certified_CE_White.png" alt="CompTIA Security+ Certified" class="max-h-32 w-auto" />
+        </div>
 
-      <!-- Network+ -->
-      <div class="glass rounded-3xl p-6 border border-white/10 flex items-center justify-center"
-           data-aos="fade-up" data-aos-delay="200">
-        <img src="images/NetworkPlus_Logo_Certified_CE_White.png" alt="CompTIA Network+ Certified" class="max-h-32 w-auto" />
-      </div>
+        <!-- Network+ -->
+        <div class="glass rounded-3xl p-6 border border-white/10 flex items-center justify-center"
+             data-aos="fade-up" data-aos-delay="200">
+          <img src="images/NetworkPlus_Logo_Certified_CE_White.png" alt="CompTIA Network+ Certified" class="max-h-32 w-auto" />
+        </div>
 
-      <!-- Project+ -->
-      <div class="glass rounded-3xl p-6 border border-white/10 flex items-center justify-center"
-           data-aos="fade-up" data-aos-delay="300">
-        <img src="images/ProjectPlus_Logo_Certified_White_.png" alt="CompTIA Project+ Certified" class="max-h-32 w-auto" />
+        <!-- Project+ -->
+        <div class="glass rounded-3xl p-6 border border-white/10 flex items-center justify-center"
+             data-aos="fade-up" data-aos-delay="300">
+          <img src="images/ProjectPlus_Logo_Certified_White_.png" alt="CompTIA Project+ Certified" class="max-h-32 w-auto" />
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- About -->
   <section id="about" class="py-20 border-t border-white/5">
