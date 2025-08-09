@@ -23,9 +23,7 @@
     "name": "ExoSentinel",
     "url": "https://exosentinel.com",
     "logo": "https://mcostner.github.io/images/logo.png",
-    "sameAs": [
-      "https://www.linkedin.com/company/exosentinel"
-    ]
+    "sameAs": ["https://www.linkedin.com/company/exosentinel"]
   }
   </script>
   <style>
@@ -34,16 +32,16 @@
     .gradient { background: radial-gradient(60% 80% at 50% 0%, rgba(32,120,255,0.15), transparent 60%), linear-gradient(180deg, #0b1020 0%, #0b1020 60%, #0f1b3a 100%); }
     a, button { transition: all 0.25s ease; }
 
-    /* Turn nav links into button-style on hover (Contact stays as-is) */
+    /* Nav links become button-style on hover (Contact stays a button) */
     nav.main a.nav-link {
-      padding: 0.5rem 0.75rem;        /* prevent layout shift */
+      padding: 0.5rem 0.75rem;
       border-radius: 0.75rem;
       transition: background-color .2s ease, color .2s ease, transform .2s ease;
     }
     nav.main a.nav-link:hover,
     nav.main a.nav-link:focus-visible {
-      background-color: #0284c7;      /* tailwind sky-600 */
-      color: #0b1020;                  /* matches your button text color */
+      background-color: #0284c7; /* sky-600 */
+      color: #0b1020;
       transform: translateY(-1px);
       outline: none;
     }
@@ -70,14 +68,14 @@
       </nav>
 
       <!-- Mobile toggle -->
-      <button id="navToggle" class="md:hidden inline-flex items-center justify-center rounded-xl border border-white/15 px-3 py-2">
+      <button id="navToggle" class="md:hidden inline-flex items-center justify-center rounded-xl border border-white/15 px-3 py-2 text-base">
         <span class="sr-only">Open menu</span> ☰
       </button>
     </div>
 
     <!-- Mobile menu -->
     <div id="mobileMenu" class="md:hidden hidden border-t border-white/10">
-      <nav class="px-4 py-3 grid gap-2 text-sm main">
+      <nav class="px-4 py-3 grid gap-2 text-base main">
         <a href="#services" class="nav-link py-3">Services</a>
         <a href="#case-study" class="nav-link py-3">Case Study</a>
         <a href="#breakfast" class="nav-link py-3">CyberBreakfast</a>
@@ -91,13 +89,17 @@
   <section id="home" class="gradient pt-16 pb-24 scroll-mt-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
       <div>
-        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">Built to Defend. Designed to Endure.</h1>
-        <p class="mt-5 text-slate-300 text-lg">Pragmatic IT and cybersecurity for small and mid-sized businesses. We help you reduce risk, meet requirements, and keep operations running.</p>
+        <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight">Built to Defend. Designed to Endure.</h1>
+        <p class="mt-5 text-slate-300 text-lg sm:text-xl leading-relaxed">
+          Pragmatic IT and cybersecurity for small and mid-sized businesses. We help you reduce risk, meet requirements, and keep operations running.
+        </p>
         <div class="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
-          <a href="#contact" class="rounded-xl bg-sky-600 hover:bg-sky-800 text-[#0b1020] font-semibold px-5 py-3 text-center">Schedule a consult</a>
-          <a href="#services" class="rounded-xl bg-sky-600 hover:bg-sky-800 text-[#0b1020] font-semibold px-5 py-3 text-center">Explore services</a>
+          <a href="#contact" class="rounded-xl bg-sky-600 hover:bg-sky-800 text-[#0b1020] font-semibold px-5 py-3 text-base text-center">Schedule a consult</a>
+          <a href="#services" class="rounded-xl bg-sky-600 hover:bg-sky-800 text-[#0b1020] font-semibold px-5 py-3 text-base text-center">Explore services</a>
         </div>
-        <p class="mt-6 text-sm text-slate-400">If your company’s cybersecurity isn’t scaling with your growth, or if you’re unsure where to start, feel free to connect. I’m always happy to answer questions or point you in the right direction.</p>
+        <p class="mt-6 text-sm sm:text-base text-slate-400 leading-relaxed">
+          If your company’s cybersecurity isn’t scaling with your growth, or if you’re unsure where to start, feel free to connect. I’m always happy to answer questions or point you in the right direction.
+        </p>
       </div>
       <div class="relative" data-aos="fade-up" data-aos-duration="1000">
         <div class="absolute inset-0 -z-10 blur-3xl opacity-40" aria-hidden="true"></div>
@@ -117,44 +119,44 @@
   <!-- Services -->
   <section id="services" class="py-20 scroll-mt-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-extrabold">Services</h2>
-      <p class="mt-3 text-slate-300">Clear, actionable offerings without fluff. Start where you are and grow securely.</p>
+      <h2 class="text-2xl sm:text-3xl font-extrabold">Services</h2>
+      <p class="mt-3 text-slate-300 text-base sm:text-lg leading-relaxed">Clear, actionable offerings without fluff. Start where you are and grow securely.</p>
       <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <article class="glass rounded-3xl p-6 border border-white/10" data-aos="fade-up" data-aos-delay="100">
-          <h3 class="text-xl font-bold">Fractional CISO</h3>
-          <p class="mt-2 text-slate-300">Board-level guidance, security roadmap, vendor oversight, and metrics that matter.</p>
+          <h3 class="text-lg sm:text-xl font-bold">Fractional CISO</h3>
+          <p class="mt-2 text-slate-300 text-base leading-relaxed">Board-level guidance, security roadmap, vendor oversight, and metrics that matter.</p>
         </article>
         <article class="glass rounded-3xl p-6 border border-white/10" data-aos="fade-up" data-aos-delay="200">
-          <h3 class="text-xl font-bold">Microsoft 365 Hardening</h3>
-          <p class="mt-2 text-slate-300">Entra ID, conditional access, MFA, baseline policies, email security, and DLP guidance.</p>
+          <h3 class="text-lg sm:text-xl font-bold">Microsoft 365 Hardening</h3>
+          <p class="mt-2 text-slate-300 text-base leading-relaxed">Entra ID, conditional access, MFA, baseline policies, email security, and DLP guidance.</p>
         </article>
         <article class="glass rounded-3xl p-6 border border-white/10" data-aos="fade-up" data-aos-delay="300">
-          <h3 class="text-xl font-bold">Email Security and Phishing Protection</h3>
-          <p class="mt-2 text-slate-300">Proofpoint or equivalent, spoofing protection, user training, and reporting.</p>
+          <h3 class="text-lg sm:text-xl font-bold">Email Security and Phishing Protection</h3>
+          <p class="mt-2 text-slate-300 text-base leading-relaxed">Proofpoint or equivalent, spoofing protection, user training, and reporting.</p>
         </article>
         <article class="glass rounded-3xl p-6 border border-white/10" data-aos="fade-up" data-aos-delay="400">
-          <h3 class="text-xl font-bold">Endpoint Protection and EDR</h3>
-          <p class="mt-2 text-slate-300">Deploy, tune, and monitor EDR to shrink dwell time and reduce false positives.</p>
+          <h3 class="text-lg sm:text-xl font-bold">Endpoint Protection and EDR</h3>
+          <p class="mt-2 text-slate-300 text-base leading-relaxed">Deploy, tune, and monitor EDR to shrink dwell time and reduce false positives.</p>
         </article>
         <article class="glass rounded-3xl p-6 border border-white/10" data-aos="fade-up" data-aos-delay="500">
-          <h3 class="text-xl font-bold">Backup and Recovery</h3>
-          <p class="mt-2 text-slate-300">3-2-1 backups, immutability options, recovery testing, and RTO/RPO alignment.</p>
+          <h3 class="text-lg sm:text-xl font-bold">Backup and Recovery</h3>
+          <p class="mt-2 text-slate-300 text-base leading-relaxed">3-2-1 backups, immutability options, recovery testing, and RTO/RPO alignment.</p>
         </article>
         <article class="glass rounded-3xl p-6 border border-white/10" data-aos="fade-up" data-aos-delay="600">
-          <h3 class="text-xl font-bold">Vulnerability Assessments</h3>
-          <p class="mt-2 text-slate-300">Lightweight scans, findings you can act on, and remediation plans.</p>
+          <h3 class="text-lg sm:text-xl font-bold">Vulnerability Assessments</h3>
+          <p class="mt-2 text-slate-300 text-base leading-relaxed">Lightweight scans, findings you can act on, and remediation plans.</p>
         </article>
         <article class="glass rounded-3xl p-6 border border-white/10" data-aos="fade-up" data-aos-delay="700">
-          <h3 class="text-xl font-bold">Compliance Readiness</h3>
-          <p class="mt-2 text-slate-300">Policy templates, gap analysis, and audit prep for common frameworks.</p>
+          <h3 class="text-lg sm:text-xl font-bold">Compliance Readiness</h3>
+          <p class="mt-2 text-slate-300 text-base leading-relaxed">Policy templates, gap analysis, and audit prep for common frameworks.</p>
         </article>
         <article class="glass rounded-3xl p-6 border border-white/10" data-aos="fade-up" data-aos-delay="800">
-          <h3 class="text-xl font-bold">Incident Response Readiness</h3>
-          <p class="mt-2 text-slate-300">Playbooks, tabletop exercises, and escalation workflows that work when you need them.</p>
+          <h3 class="text-lg sm:text-xl font-bold">Incident Response Readiness</h3>
+          <p class="mt-2 text-slate-300 text-base leading-relaxed">Playbooks, tabletop exercises, and escalation workflows that work when you need them.</p>
         </article>
         <article class="glass rounded-3xl p-6 border border-white/10" data-aos="fade-up" data-aos-delay="900">
-          <h3 class="text-xl font-bold">Cloud Security</h3>
-          <p class="mt-2 text-slate-300">Secure configurations in Azure, AWS, and Google Cloud with guardrails for growth.</p>
+          <h3 class="text-lg sm:text-xl font-bold">Cloud Security</h3>
+          <p class="mt-2 text-slate-300 text-base leading-relaxed">Secure configurations in Azure, AWS, and Google Cloud with guardrails for growth.</p>
         </article>
       </div>
     </div>
@@ -165,9 +167,11 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-3 gap-10 items-start">
         <div class="lg:col-span-2" data-aos="fade-right">
-          <h2 class="text-3xl font-extrabold">Case Study: Accounting Firm Modernization</h2>
-          <p class="mt-3 text-slate-300">Migrated an accounting and tax firm from personal Microsoft accounts to a secure, cloud-managed Microsoft 365 environment. Implemented Entra ID P1 security policies, MFA, and conditional access. Deployed advanced email protection and EDR across endpoints. Configured SharePoint and OneDrive, trained staff, and delivered full documentation.</p>
-          <ul class="mt-6 space-y-2 text-slate-300 list-disc list-inside">
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Case Study: Accounting Firm Modernization</h2>
+          <p class="mt-3 text-slate-300 text-base sm:text-lg leading-relaxed">
+            Migrated an accounting and tax firm from personal Microsoft accounts to a secure, cloud-managed Microsoft 365 environment. Implemented Entra ID P1 security policies, MFA, and conditional access. Deployed advanced email protection and EDR across endpoints. Configured SharePoint and OneDrive, trained staff, and delivered full documentation.
+          </p>
+          <ul class="mt-6 space-y-2 text-slate-300 list-disc list-inside text-base sm:text-lg leading-relaxed">
             <li>Reduced login risk with MFA and conditional access</li>
             <li>Hardened email to cut phishing exposure</li>
             <li>Standardized endpoint security and backups</li>
@@ -175,8 +179,8 @@
           </ul>
         </div>
         <aside class="glass rounded-3xl border border-white/10 p-6" data-aos="fade-left">
-          <h3 class="text-xl font-bold">Results</h3>
-          <p class="mt-2 text-slate-300">Smooth cutover with minimal disruption, clearer ownership, and measurable improvements in security posture.</p>
+          <h3 class="text-lg sm:text-xl font-bold">Results</h3>
+          <p class="mt-2 text-slate-300 text-base leading-relaxed">Smooth cutover with minimal disruption, clearer ownership, and measurable improvements in security posture.</p>
           <a href="#contact" class="mt-4 inline-block rounded-xl bg-sky-600 hover:bg-sky-800 text-[#0b1020] font-semibold px-5 py-3">Discuss a project</a>
         </aside>
       </div>
@@ -186,52 +190,47 @@
   <!-- CyberBreakfast -->
   <section id="breakfast" class="py-20 border-t border-white/5 scroll-mt-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-extrabold">CyberBreakfast for Businesses</h2>
-      <p class="mt-3 text-slate-300">Short, practical guidance for SMB leaders. No jargon. Actionable steps you can take today.</p>
+      <h2 class="text-2xl sm:text-3xl font-extrabold">CyberBreakfast for Businesses</h2>
+      <p class="mt-3 text-slate-300 text-base sm:text-lg leading-relaxed">Short, practical guidance for SMB leaders. No jargon. Actionable steps you can take today.</p>
       <div class="mt-8 grid lg:grid-cols-2 gap-6">
         <article class="glass rounded-3xl p-6 border border-white/10" data-aos="fade-up">
-          <h3 class="text-xl font-bold">AI-Powered Phishing: What Leaders Need to Know</h3>
-          <p class="mt-2 text-slate-300">Attackers are using AI to craft convincing emails. Tighten email security, empower staff with examples, and verify requests out of band.</p>
-          <p class="mt-4 text-sm text-slate-400">#EXOSENTINEL #CyberBreakfastForBusinesses #MindfulMikeSecurity</p>
+          <h3 class="text-lg sm:text-xl font-bold">AI-Powered Phishing: What Leaders Need to Know</h3>
+          <p class="mt-2 text-slate-300 text-base leading-relaxed">Attackers are using AI to craft convincing emails. Tighten email security, empower staff with examples, and verify requests out of band.</p>
+          <p class="mt-4 text-sm sm:text-base text-slate-400">#EXOSENTINEL #CyberBreakfastForBusinesses #MindfulMikeSecurity</p>
         </article>
         <article class="glass rounded-3xl p-6 border border-white/10" data-aos="fade-up" data-aos-delay="150">
-          <h3 class="text-xl font-bold">AI Acceptable Use for SMBs</h3>
-          <p class="mt-2 text-slate-300">Define what data is safe to put in AI tools, who can use them, and how outputs are checked for accuracy and bias.</p>
-          <p class="mt-4 text-sm text-slate-400">#EXOSENTINEL #CyberBreakfastForBusinesses #MindfulMikeSecurity</p>
+          <h3 class="text-lg sm:text-xl font-bold">AI Acceptable Use for SMBs</h3>
+          <p class="mt-2 text-slate-300 text-base leading-relaxed">Define what data is safe to put in AI tools, who can use them, and how outputs are checked for accuracy and bias.</p>
+          <p class="mt-4 text-sm sm:text-base text-slate-400">#EXOSENTINEL #CyberBreakfastForBusinesses #MindfulMikeSecurity</p>
         </article>
       </div>
-      <p class="mt-6 text-sm text-slate-400">If your business growth is outpacing your Managed IT or Cybersecurity capabilities, or if you're not sure where to begin, feel free to reach out. We're always happy to answer questions, share insights, or help guide you in the right direction.</p>
+      <p class="mt-6 text-sm sm:text-base text-slate-400 leading-relaxed">
+        If your business growth is outpacing your Managed IT or Cybersecurity capabilities, or if you're not sure where to begin, feel free to reach out. We're always happy to answer questions, share insights, or help guide you in the right direction.
+      </p>
     </div>
   </section>
 
   <!-- Certifications & Credentials -->
   <section id="certifications" class="py-20 border-t border-white/5 scroll-mt-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-extrabold">Certifications &amp; Credentials</h2>
-      <p class="mt-3 text-slate-300">Professional certifications that demonstrate expertise and commitment to best practices.</p>
+      <h2 class="text-2xl sm:text-3xl font-extrabold">Certifications &amp; Credentials</h2>
+      <p class="mt-3 text-slate-300 text-base sm:text-lg leading-relaxed">Professional certifications that demonstrate expertise and commitment to best practices.</p>
 
       <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6">
         <!-- CySA+ -->
-        <div class="glass rounded-3xl p-6 border border-white/10 flex items-center justify-center"
-             data-aos="fade-up" data-aos-delay="0">
+        <div class="glass rounded-3xl p-6 border border-white/10 flex items-center justify-center" data-aos="fade-up" data-aos-delay="0">
           <img src="images/CySAPlus_ce_certified_Logo_WHITE.png" alt="CompTIA CySA+ Certified" class="max-h-32 w-auto" loading="lazy" />
         </div>
-
         <!-- Security+ -->
-        <div class="glass rounded-3xl p-6 border border-white/10 flex items-center justify-center"
-             data-aos="fade-up" data-aos-delay="100">
+        <div class="glass rounded-3xl p-6 border border-white/10 flex items-center justify-center" data-aos="fade-up" data-aos-delay="100">
           <img src="images/SecurityPlus_Logo_Certified_CE_White.png" alt="CompTIA Security+ Certified" class="max-h-32 w-auto" loading="lazy" />
         </div>
-
         <!-- Network+ -->
-        <div class="glass rounded-3xl p-6 border border-white/10 flex items-center justify-center"
-             data-aos="fade-up" data-aos-delay="200">
+        <div class="glass rounded-3xl p-6 border border-white/10 flex items-center justify-center" data-aos="fade-up" data-aos-delay="200">
           <img src="images/NetworkPlus_Logo_Certified_CE_White.png" alt="CompTIA Network+ Certified" class="max-h-32 w-auto" loading="lazy" />
         </div>
-
         <!-- Project+ -->
-        <div class="glass rounded-3xl p-6 border border-white/10 flex items-center justify-center"
-             data-aos="fade-up" data-aos-delay="300">
+        <div class="glass rounded-3xl p-6 border border-white/10 flex items-center justify-center" data-aos="fade-up" data-aos-delay="300">
           <img src="images/ProjectPlus_Logo_Certified_White_.png" alt="CompTIA Project+ Certified" class="max-h-32 w-auto" loading="lazy" />
         </div>
       </div>
@@ -243,17 +242,21 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-10 items-start">
         <div>
-          <h2 class="text-3xl font-extrabold">About ExoSentinel</h2>
-          <p class="mt-3 text-slate-300">Three decades of hands-on IT with a focus on practical security. We’ve supported MSP, SMB, and enterprise environments, and we know how to balance security with usability and cost.</p>
-          <ul class="mt-6 space-y-2 text-slate-300 list-disc list-inside">
+          <h2 class="text-2xl sm:text-3xl font-extrabold">About ExoSentinel</h2>
+          <p class="mt-3 text-slate-300 text-base sm:text-lg leading-relaxed">
+            Three decades of hands-on IT with a focus on practical security. We’ve supported MSP, SMB, and enterprise environments, and we know how to balance security with usability and cost.
+          </p>
+          <ul class="mt-6 space-y-2 text-slate-300 list-disc list-inside text-base sm:text-lg leading-relaxed">
             <li>Over 30 years of IT experience</li>
             <li>Security focused with real operational outcomes</li>
             <li>Vendor-agnostic guidance that fits your stack</li>
           </ul>
         </div>
-        <div class="glass rounded-3xl p-6 border border-white/10">
-          <h3 class="text-xl font-bold">Our Philosophy</h3>
-          <p class="mt-2 text-slate-300">Start with the basics, prove value, then scale. Measure what matters and keep teams productive while raising the bar on security.</p>
+        <div class="glass rounded-3xl p-6 border border-white/10" data-aos="fade-left" data-aos-delay="150">
+          <h3 class="text-lg sm:text-xl font-bold">Our Philosophy</h3>
+          <p class="mt-2 text-slate-300 text-base sm:text-lg leading-relaxed">
+            Start with the basics, prove value, then scale. Measure what matters and keep teams productive while raising the bar on security.
+          </p>
         </div>
       </div>
     </div>
@@ -262,19 +265,21 @@
   <!-- Contact -->
   <section id="contact" class="py-20 border-t border-white/5 scroll-mt-24">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-extrabold">Let’s talk</h2>
-      <p class="mt-3 text-slate-300">Tell us a bit about your environment and goals. We’ll reply with next steps and a practical plan.</p>
+      <h2 class="text-2xl sm:text-3xl font-extrabold">Let’s talk</h2>
+      <p class="mt-3 text-slate-300 text-base sm:text-lg leading-relaxed">
+        Tell us a bit about your environment and goals. We’ll reply with next steps and a practical plan.
+      </p>
       <div class="mt-8 grid sm:grid-cols-2 gap-4 max-w-xl mx-auto">
-        <a href="mailto:mikeneedsanitjob@gmail.com" class="rounded-xl bg-sky-600 hover:bg-sky-800 text-[#0b1020] font-semibold px-5 py-3">Email</a>
-        <a href="https://www.linkedin.com/company/exosentinel" class="rounded-xl bg-sky-600 hover:bg-sky-800 text-[#0b1020] font-semibold px-5 py-3">LinkedIn</a>
+        <a href="mailto:mikeneedsanitjob@gmail.com" class="rounded-xl bg-sky-600 hover:bg-sky-800 text-[#0b1020] font-semibold px-5 py-3 text-base">Email</a>
+        <a href="https://www.linkedin.com/company/exosentinel" class="rounded-xl bg-sky-600 hover:bg-sky-800 text-[#0b1020] font-semibold px-5 py-3 text-base">LinkedIn</a>
       </div>
-      <p class="mt-6 text-sm text-slate-400">Response within one business day.</p>
+      <p class="mt-6 text-sm sm:text-base text-slate-400">Response within one business day.</p>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="py-10 border-t border-white/5">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-sm text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-sm sm:text-base text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-4">
       <p>© <span id="year"></span> ExoSentinel. All rights reserved.</p>
       <nav class="flex gap-4">
         <a href="#services" class="hover:text-white/90">Services</a>
