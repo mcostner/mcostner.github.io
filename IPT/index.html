@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Innovative Precision Technologies</title>
+  <style>
+    :root {
+      --bg: #050505;
+      --border: rgba(226, 167, 64, 0.22);
+      --gold: #f2be67;
+      --gold-bright: #ffd889;
+      --text: #f6efe4;
+      --text-soft: rgba(246, 239, 228, 0.78);
+      --shadow: 0 22px 55px rgba(0, 0, 0, 0.48);
+      --radius: 26px;
+      --max: 1240px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.5;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,0.82), rgba(0,0,0,0.74) 18%, rgba(0,0,0,0.78) 45%, rgba(0,0,0,0.88)),
+        url("assets/background-stars-swish.png") center top / cover no-repeat;
+      z-index: -3;
+      transform: scale(1.02);
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at top right, rgba(245, 189, 89, 0.08), transparent 26%),
+        radial-gradient(circle at 20% 20%, rgba(245, 189, 89, 0.04), transparent 22%);
+      z-index: -2;
+      pointer-events: none;
+    }
+    .page-shell { position: relative; z-index: 1; }
+    .container { width: min(calc(100% - 40px), var(--max)); margin: 0 auto; }
+    .topbar {
+      position: sticky; top: 0; z-index: 30; backdrop-filter: blur(18px);
+      background: linear-gradient(180deg, rgba(4,4,6,0.86), rgba(4,4,6,0.62));
+      border-bottom: 1px solid rgba(255, 200, 96, 0.12);
+    }
+    .topbar-inner {
+      width: min(calc(100% - 40px), var(--max)); margin: 0 auto; display: flex;
+      justify-content: space-between; align-items: center; gap: 22px; padding: 14px 0;
+    }
+    .brand-mark { display: flex; align-items: center; gap: 16px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .brand-mark strong { font-size: 0.95rem; color: var(--gold-bright); }
+    .brand-mark span { font-size: 0.7rem; color: var(--text-soft); }
+	.brand-text { display: flex; flex-direction: column; line-height: 1.2; }
+    .nav { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+    .nav a { color: var(--text-soft); text-decoration: none; font-size: 0.9rem; transition: color 0.25s ease; }
+    .nav a:hover { color: var(--gold-bright); }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 13px 22px;
+      border-radius: 999px; border: 1px solid rgba(248, 190, 83, 0.36);
+      background: linear-gradient(180deg, rgba(245, 182, 73, 0.16), rgba(245, 182, 73, 0.06));
+      color: var(--text); text-decoration: none; box-shadow: 0 0 25px rgba(229, 160, 48, 0.12);
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; font-size: 0.95rem;
+    }
+    .btn:hover { transform: translateY(-2px); border-color: rgba(255, 212, 121, 0.6); box-shadow: 0 8px 28px rgba(229, 160, 48, 0.2); }
+    .hero { padding: 72px 0 48px; }
+    .hero-grid { display: grid; grid-template-columns: 1.08fr 0.92fr; gap: 28px; align-items: stretch; }
+    .glass-card {
+      background: linear-gradient(180deg, rgba(11,11,14,0.78), rgba(8,8,10,0.66));
+      border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow);
+      overflow: hidden; position: relative;
+    }
+    .hero-copy { padding: 48px; display: flex; flex-direction: column; justify-content: center; min-height: 620px; }
+    .eyebrow { margin: 0 0 16px; color: var(--gold-bright); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.76rem; }
+    h1, h2, h3, h4, p { margin-top: 0; }
+    h1 { font-size: clamp(2rem, 3vw, 3rem); line-height: 1.1; margin-bottom: 16px; max-width: 18ch; }
+    .hero-copy .lead { color: var(--text-soft); font-size: 1.08rem; max-width: 60ch; margin-bottom: 28px; }
+    .slogan { font-style: italic; color: var(--gold-bright); font-size: 1.04rem; margin-bottom: 30px; max-width: 54ch; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 28px; }
+    .hero-notes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 4px; }
+    .hero-note { padding: 18px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255, 203, 110, 0.12); border-radius: 18px; }
+    .hero-note strong { color: var(--gold-bright); display: block; font-size: 1.1rem; margin-bottom: 6px; }
+    .hero-note span { color: var(--text-soft); font-size: 0.88rem; }
+    .hero-visual {
+      min-height: 620px; position: relative;
+      background: linear-gradient(180deg, rgba(0,0,0,0.10), rgba(0,0,0,0.34)),
+      url("assets/hero-commercial-building.png") center center / cover no-repeat;
+    }
+    .hero-badge {
+      position: absolute; right: 24px; bottom: 24px; width: min(330px, calc(100% - 48px));
+      padding: 22px 24px; border-radius: 24px; border: 1px solid rgba(255, 211, 118, 0.24);
+      background: linear-gradient(180deg, rgba(10,10,12,0.72), rgba(10,10,12,0.52)); backdrop-filter: blur(10px);
+    }
+    .hero-badge strong { display: block; color: var(--gold-bright); font-size: 1rem; margin-bottom: 6px; }
+    .hero-badge span { color: var(--text-soft); font-size: 0.92rem; }
+    .divider {
+      width: min(92%, 1160px);
+      margin: 4px auto 20px;
+      opacity: 0.9;
+      filter: drop-shadow(0 0 10px rgba(247, 188, 76, 0.20));
+    }
+    .divider img { width: 100%; display: block; }
+    section {
+      padding: 8px 0 30px;
+    }
+    .section-head { max-width: 760px; margin-bottom: 26px; }
+    .section-head h2 { font-size: clamp(2rem, 3vw, 3rem); margin-bottom: 10px; }
+    .section-head p { color: var(--text-soft); font-size: 1.03rem; }
+    .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; align-items: center; }
+    .image-panel {
+      height: 100%;
+      min-height: 520px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      background-color: rgba(12,12,14,0.72);
+    }
+    .image-panel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .content-card { padding: 34px; }
+    .content-card p { color: var(--text-soft); font-size: 1rem; }
+    .feature-list { padding: 0; margin: 22px 0 0; list-style: none; display: grid; gap: 12px; }
+    .feature-list li { padding: 12px 14px; border-radius: 16px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255, 203, 110, 0.12); color: var(--text-soft); }
+    .cards-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .cards-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .info-card, .process-card { padding: 30px; min-height: 100%; }
+    .stack-card { padding: 24px; min-height: 220px; }
+    .info-card h3, .stack-card h3, .process-card h3 { font-size: 1.3rem; margin-bottom: 8px; }
+    .info-card p, .stack-card p, .process-card p { color: var(--text-soft); font-size: 0.96rem; margin-bottom: 0; }
+    .step-number {
+      width: 50px; height: 50px; border-radius: 50%; display: inline-grid; place-items: center; margin-bottom: 16px;
+      color: var(--bg); background: linear-gradient(180deg, var(--gold-bright), var(--gold)); font-weight: 700;
+      box-shadow: 0 0 18px rgba(248, 189, 81, 0.22);
+    }
+    .stack-card strong { display: inline-block; color: var(--gold-bright); margin-bottom: 10px; font-size: 0.92rem; }
+    .quote-band { padding: 36px; text-align: center; font-size: clamp(1.3rem, 2vw, 2rem); font-style: italic; color: var(--gold-bright); }
+    .footer-cta {
+      position: relative; min-height: 520px; border-radius: 34px; overflow: hidden; border: 1px solid rgba(255, 203, 110, 0.20);
+      box-shadow: var(--shadow); background: linear-gradient(180deg, rgba(0,0,0,0.20), rgba(0,0,0,0.65)),
+      url("assets/build-together-construction.png") center center / cover no-repeat; display: grid; align-items: end;
+    }
+    .footer-cta-copy { padding: 48px; max-width: 760px; }
+    .footer-cta h2 { font-size: clamp(2.4rem, 4vw, 4.4rem); line-height: 0.95; margin-bottom: 14px; }
+    .footer-cta p { color: rgba(246, 239, 228, 0.9); font-size: 1.05rem; max-width: 56ch; margin-bottom: 24px; }
+    .footer-bar { padding: 28px 0 40px; color: rgba(246, 239, 228, 0.64); font-size: 0.9rem; text-align: center; }
+    .animate { opacity: 0; transition: opacity 0.9s ease, transform 0.9s ease, filter 0.9s ease; filter: blur(8px); will-change: transform, opacity; }
+    .from-left { transform: translateX(-48px); }
+    .from-right { transform: translateX(48px); }
+    .from-bottom { transform: translateY(44px); }
+    .animate.in-view { opacity: 1; transform: translateX(0) translateY(0); filter: blur(0); }
+    @media (max-width: 1080px) {
+      .hero-grid, .split-grid, .cards-4, .cards-3, .hero-notes { grid-template-columns: 1fr 1fr; }
+      .cards-4 .stack-card:last-child, .cards-3 .info-card:last-child { grid-column: span 2; }
+    }
+    @media (max-width: 860px) {
+      .topbar-inner { flex-direction: column; align-items: flex-start; }
+      .hero-grid, .split-grid, .cards-4, .cards-3, .hero-notes { grid-template-columns: 1fr; }
+      .hero-copy, .hero-visual, .image-panel, .footer-cta { min-height: unset; }
+      .hero-copy, .content-card, .quote-band, .footer-cta-copy { padding: 30px; }
+      h1 { max-width: 13ch; }
+      .cards-4 .stack-card:last-child, .cards-3 .info-card:last-child { grid-column: auto; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-shell">
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand-mark">
+      <img src="assets/logo.png" alt="Innovative Precision Technologies Logo" style="height:64px;width:auto;">
+      <div class="brand-text">
+        <strong style="font-size:1rem;">Innovative Precision Technologies</strong>
+        <span style="font-size:0.75rem;color:rgba(246,239,228,0.75);">
+          Your Total Technology Partner. Driven by Innovation. Delivered with Precision.
+        </span>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#stack">Platform</a>
+      <a href="#residential">Residential</a>
+      <a href="#build">Build Together</a>
+    </nav>
+  </div>
+</header>
+
+    <main>
+      <section class="hero container">
+        <div class="hero-grid">
+          <div class="glass-card hero-copy animate from-left">
+            <h1>Your Total Technology Partner.</h1>
+			<h1>Driven by Innovation.</h1>
+			<h1>Delivered with Precision.</h1>
+            <p class="lead">
+              Innovative Precision Technologies blends infrastructure, security, networking, cloud strategy, and white-glove support into one polished delivery model for commercial, residential, and project-based environments.
+            </p>
+            <div class="hero-actions">
+              <a class="btn" href="#services">Explore Services</a>
+              <a class="btn" href="#build">Start a Conversation</a>
+            </div>
+            <div class="hero-notes">
+              <div class="hero-note">
+                <strong>Infrastructure</strong>
+                <span>Architecture-minded systems delivery shaped by real operational experience.</span>
+              </div>
+              <div class="hero-note">
+                <strong>Security</strong>
+                <span>Protection designed into the environment, not layered on after the fact.</span>
+              </div>
+              <div class="hero-note">
+                <strong>Cloud & Network</strong>
+                <span>Practical modernization guided by resilience, visibility, and uptime.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card hero-visual animate from-right">
+            <div class="hero-badge">
+              <strong>Built for elevated environments</strong>
+              <span>Commercial operations, executive residences, cybersecurity services, and project-led technology integration.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"><img src="assets/section-divider-gold-line.png" alt="Golden divider line" /></div>
+
+      <section id="services" class="container">
+        <div class="section-head animate from-bottom">
+          <p class="eyebrow">Core Positioning</p>
+          <h2>Not a typical MSP. A precision-led technology partner.</h2>
+          <p>
+            We approach technology with an engineering mindset, not a checklist. Every environment is assessed, designed, and supported based on real-world requirements, not templated solutions.
+			
+			Our work spans infrastructure, security, networking, and cloud, allowing us to build systems that are stable, secure, and aligned with how your business actually operates, not how a standard service model expects it to.
+          </p>
+        </div>
+
+        <div class="cards-3">
+          <article class="glass-card info-card animate from-left">
+            <h3>Commercial IT</h3>
+            <p>Operationally mature support for offices, multi-site businesses, and executive environments where reliability, response, and continuity matter.</p>
+          </article>
+          <article class="glass-card info-card animate from-bottom">
+            <h3>Residential IT & Security</h3>
+            <p>Comprehensive support for home networks, devices, security, and connectivity, designed for performance, protection, and ease of use.</p>
+          </article>
+          <article class="glass-card info-card animate from-right">
+            <h3>Security & Advisory</h3>
+            <p>Cybersecurity services, hardening, recovery readiness, email security, identity protection, backup strategy, and architecture guidance under one umbrella.</p>
+          </article>
+        </div>
+      </section>
+
+      <div class="divider"><img src="assets/section-divider-gold-line.png" alt="Golden divider line" /></div>
+
+      <section class="container">
+        <div class="split-grid">
+          <div class="image-panel animate from-left">
+            <img src="assets/commercial-van-service.png" alt="Luxury service van in front of illuminated commercial building" />
+          </div>
+          <div class="glass-card content-card animate from-right">
+            <p class="eyebrow">Commercial Technology Services</p>
+            <h2>Built for performance.</h2>
+			<h2>Operated with precision.</h2>
+            <ul class="feature-list">
+              <li>Structured IT support backed by proven MSP processes and tooling</li>
+			  <li>Coverage across infrastructure, systems, networking, security, and cloud environments</li>
+              <li>Designed for organizations that need dependable performance, clear accountability, and scalable support</li>
+              <li>Ideal for organizations that value responsiveness, consistency, and trust.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"><img src="assets/section-divider-gold-line.png" alt="Golden divider line" /></div>
+
+      <section>
+        <div class="container">
+          <div class="section-head animate from-bottom">
+            <p class="eyebrow">Process</p>
+            <h2>A structured approach to precision, consistency, and long-term resilience.</h2>
+            <p>
+              Our process is built around <strong>assessment, architecture, deployment, and defense</strong>, creating environments that are intentionally designed, not assembled.
+            </p>
+          </div>
+
+          <div id="process" class="cards-4">
+            <article class="glass-card process-card animate from-left">
+              <div class="step-number">1</div>
+              <h3>Assess</h3>
+              <p>Understand the environment, expectations, risk profile, current friction points, and what a premium experience actually requires.</p>
+            </article>
+            <article class="glass-card process-card animate from-left">
+              <div class="step-number">2</div>
+              <h3>Architect</h3>
+              <p>Design a fit-for-purpose solution across systems, security, network, cloud, and support workflows rather than forcing a template.</p>
+            </article>
+            <article class="glass-card process-card animate from-bottom">
+              <div class="step-number">3</div>
+              <h3>Deploy</h3>
+              <p>Implement cleanly with minimal disruption, clear ownership, and a finished environment that feels intentional from day one.</p>
+            </article>
+            <article class="glass-card process-card animate from-right">
+              <div class="step-number">4</div>
+              <h3>Defend</h3>
+              <p>Maintain posture with monitoring, backup, identity protection, endpoint controls, email security, and ongoing operational visibility.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"><img src="assets/section-divider-gold-line.png" alt="Golden divider line" /></div>
+
+      <section>
+        <div class="container">
+          <div class="section-head animate from-bottom">
+            <p class="eyebrow">Security Operations</p>
+            <h2>Cybersecurity built into the foundation.</h2>
+            <p>
+              Protection is not treated as an add-on. It is embedded across endpoints, identity, email, backup, and infrastructure, creating environments that are secure, visible, and resilient by design.
+            </p>
+          </div>
+
+          <div class="split-grid">
+            <div class="glass-card content-card animate from-left">
+              <p class="eyebrow">Cybersecurity Operations</p>
+              <h2>Built for protection.</h2>
+			  <h2>Engineered for resilience.</h2>
+              <ul class="feature-list">
+                <li>24/7 monitoring and response readiness through layered endpoint and SOC-aligned tooling.</li>
+                <li>Identity, email, backup, and hardening controls that align with executive and business risk.</li>
+                <li>Practical visibility across assets, vulnerabilities, documentation, and remote support operations.</li>
+				<li>Structured incident response and remediation processes to contain, resolve, and prevent recurring issues.</li>
+              </ul>
+            </div>
+            <div class="image-panel animate from-right">
+              <img src="assets/cybersecurity-command-center.png" alt="Technician working in a server environment with a cybersecurity visual treatment" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"><img src="assets/section-divider-gold-line.png" alt="Golden divider line" /></div>
+
+      <section id="stack" class="container">
+        <div class="section-head animate from-bottom">
+          <p class="eyebrow">Service Platform</p>
+          <h2>The technology behind the service.</h2>
+          <p>
+            Our platform combines industry-proven tools across security, monitoring, documentation, and recovery to deliver consistent, reliable support without unnecessary complexity.
+          </p>
+        </div>
+
+        <div class="cards-4">
+          <article class="glass-card stack-card animate from-left">
+            <strong>Detection & Response</strong>
+            <h3>SentinelOne Complete</h3>
+            <p>Endpoint protection with 24/7 SOC monitoring for business and executive environments that cannot afford uncertainty.</p>
+          </article>
+          <article class="glass-card stack-card animate from-left">
+            <strong>Remote Operations</strong>
+            <h3>ConnectWise RMM & ScreenConnect</h3>
+            <p>Secure remote management, maintenance, and support delivery designed to keep service responsive and unobtrusive.</p>
+          </article>
+          <article class="glass-card stack-card animate from-bottom">
+            <strong>Documentation & Recovery</strong>
+            <h3>ITGlue & Cove Backup</h3>
+            <p>Structured knowledge and recoverability that reduce chaos, accelerate support, and improve business continuity.</p>
+          </article>
+          <article class="glass-card stack-card animate from-right">
+            <strong>Security Layers</strong>
+            <h3>Proofpoint, Keeper, Wazuh</h3>
+            <p>Email protection, credential security, and infrastructure visibility that strengthen the environment around the endpoint.</p>
+          </article>
+        </div>
+      </section>
+
+      <div class="divider"><img src="assets/section-divider-gold-line.png" alt="Golden divider line" /></div>
+
+      <section id="residential" class="container">
+        <div class="split-grid">
+          <div class="image-panel animate from-left">
+            <img src="assets/residential-neighborhood.png" alt="Luxury residential neighborhood illuminated at twilight" />
+          </div>
+          <div class="glass-card content-card animate from-right">
+            <p class="eyebrow">Residential & Home Office Technology</p>
+            <h2>Technology that supports the way you live and work.</h2>
+            <p>
+              Modern homes often function as both living spaces and work environments. We design and support technology that keeps connectivity stable, systems secure, and daily operations running without disruption.
+            </p>
+            <ul class="feature-list">
+              <li>Support for home offices and home-based businesses that rely on consistent, secure performance.</li>
+              <li>Reliable connectivity, endpoint protection, backup strategy, and ongoing support.</li>
+              <li>Clean, well-integrated solutions that improve usability without adding complexity.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"><img src="assets/section-divider-gold-line.png" alt="Golden divider line" /></div>
+
+      <section class="container">
+        <div class="cards-3">
+          <article class="glass-card info-card animate from-left">
+            <h3>Mike</h3>
+			<p>Infrastructure & Security Architecture</p>
+            <p>Over 30 years of experience across systems, security, and enterprise operations, with a focus on hardening environments, improving visibility, and delivering structured, security-first solutions.</p>
+          </article>
+          <article class="glass-card info-card animate from-bottom">
+            <h3>Steve</h3>
+			<p>Network & Cloud Architect</p>
+            <p>20 years of experience in network engineering and cloud platforms, delivering secure, high-performance infrastructure with a focus on scalability, reliability, and modern network design.</p>
+          </article>
+          <article class="glass-card info-card animate from-right">
+            <h3>Integrated Expertise</h3>
+            <p>Combined expertise across infrastructure, security, networking, and cloud enables environments that are intentionally designed, not pieced together.</p>
+          </article>
+        </div>
+      </section>
+
+      <div class="divider"><img src="assets/section-divider-gold-line.png" alt="Golden divider line" /></div>
+
+      <section class="container">
+        <div class="glass-card quote-band animate from-bottom">
+          Precision where it matters. Presence where it counts. Protection throughout.
+        </div>
+      </section>
+
+      <div class="divider"><img src="assets/section-divider-gold-line.png" alt="Golden divider line" /></div>
+
+      <section id="build" class="container">
+        <div class="footer-cta animate from-bottom">
+          <div class="footer-cta-copy">
+            <p class="eyebrow">Project Delivery & Technology Integration</p>
+            <h2>Let’s build something together.</h2>
+            <p>
+              From new environments to modernization efforts, we partner with you to design, implement, and support technology solutions that align with your goals and scale with your needs.
+            </p>
+            <a class="btn" href="mailto:hello@precisioninnovationtechnologies.com">Start the conversation</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container footer-bar">
+      Copyright © 2026 Innovative Precision Technologies - All Rights Reserved.
+    </footer>
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.16 });
+
+    document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
