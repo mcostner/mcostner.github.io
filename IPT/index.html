@@ -3,522 +3,829 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Precision Innovation Technologies</title>
-  <meta name="description" content="Enterprise-Level support for modern luxury living." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Serif font only -->
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Innovative Precision Technologies</title>
   <style>
-    :root{--bg:#070707;--bg-soft:#0c0c0c;--panel:#101010;--panel-2:#141414;--gold:#c99b48;--gold-soft:#9f7a3d;--gold-bright:#e0b768;--text:#f5f1e9;--muted:#c7bea9;--line:rgba(201,155,72,.32);--shadow:0 24px 80px rgba(0,0,0,.45);--radius:22px;--max:1240px}
-    *{box-sizing:border-box} html{scroll-behavior:smooth}
-    body{margin:0;background:linear-gradient(180deg, rgba(7,7,7,.82), rgba(7,7,7,.94)),url("assets/background.png") center top / cover fixed no-repeat;color:var(--text);font-family:"Cormorant Garamond", "Times New Roman", Times, serif;line-height:1.6;overflow-x:hidden}
-    img{max-width:100%;display:block} a{text-decoration:none;color:inherit}
-    .container{width:min(calc(100% - 40px), var(--max));margin:0 auto}
-    .site-header{position:fixed;top:0;left:0;width:100%;z-index:1000;transition:all .35s ease;background:linear-gradient(180deg, rgba(4,4,4,.72), rgba(4,4,4,.2));backdrop-filter:blur(8px);border-bottom:1px solid transparent}
-    .site-header.scrolled{background:rgba(8,8,8,.9);border-bottom:1px solid rgba(201,155,72,.16);box-shadow:0 10px 30px rgba(0,0,0,.24)}
-    .nav{min-height:86px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{display:flex;align-items:center;gap:14px;min-width:0}
-    .brand img{width:80px;height:80px;object-fit:contain;filter:drop-shadow(0 4px 14px rgba(201,155,72,.18))}
-    .brand-copy{
-  display:flex;
-  flex-direction:column;
-  line-height:1.05;
-  font-size:1.4rem;
-  font-weight:600;
-  letter-spacing:.06em;
-  color:#f1e0b9;
-  text-transform:uppercase;
-}
-.brand-tagline{
-  font-size:.85rem;
-  font-weight:400;
-  letter-spacing:.06em;
-  color:#c7bea9;
-  text-transform:none;
-  margin-top:4px;
-  white-space:nowrap;
-}
-    .brand-copy strong{font-family:"Cormorant Garamond",serif;font-size:1.85rem;letter-spacing:.03em;font-weight:600;color:#f1e0b9}
-    .brand-copy span{font-size:.75rem;text-transform:uppercase;letter-spacing:.34em;color:var(--muted);margin-top:4px}
-    .nav-links{display:flex;align-items:center;gap:28px;color:#e8dfcf;font-size:.95rem}
-    .nav-links a{position:relative;opacity:.92}
-    .nav-links a::after{content:"";position:absolute;left:0;bottom:-8px;width:100%;height:1px;background:linear-gradient(90deg, transparent, var(--gold), transparent);transform:scaleX(0);transform-origin:center;transition:transform .28s ease}
-    .nav-links a:hover::after{transform:scaleX(1)}
-    .nav-cta{padding:13px 20px;border:1px solid rgba(201,155,72,.36);border-radius:999px;background:linear-gradient(180deg, rgba(201,155,72,.12), rgba(201,155,72,.04));box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}
-    .hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:140px 0 84px;isolation:isolate;overflow:hidden}
-    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg, rgba(5,5,5,.78) 0%, rgba(5,5,5,.62) 38%, rgba(5,5,5,.38) 68%, rgba(5,5,5,.64) 100%),linear-gradient(180deg, rgba(7,7,7,.16), rgba(7,7,7,.66) 100%);z-index:-3;transform:scale(1.03)}
-    .hero::after{content:"";position:absolute;inset:auto 0 0 0;height:170px;background:linear-gradient(180deg, transparent, #070707);z-index:-2}
-    .hero-glow{position:absolute;right:-140px;top:12%;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle, rgba(201,155,72,.22), transparent 68%);filter:blur(18px);z-index:-1;pointer-events:none}
-    .hero-grid{display:grid;grid-template-columns:minmax(0, 1.02fr) minmax(0, .98fr);gap:28px;align-items:stretch}
-    .eyebrow{
-  display:inline-flex;
-  align-items:center;
-  gap:14px;
-  color:#ecd9ae;
-  text-transform:uppercase;
-  letter-spacing:.28em;
-  font-size:.78rem;
-  margin-bottom:20px;
-  flex-wrap:nowrap;
-  white-space:nowrap;
-}
-.eyebrow::before,
-.eyebrow::after{
-  content:"";
-  flex:1;
-  max-width:60px;
-  height:1px;
-}
-.eyebrow::before{
-  background:linear-gradient(90deg, transparent, var(--gold-bright));
-}
-.eyebrow::after{
-  background:linear-gradient(90deg, var(--gold-bright), transparent);
-}
-.eyebrow::before{
-  background:linear-gradient(90deg, transparent, var(--gold-bright));
-}
-.eyebrow::after{
-  background:linear-gradient(90deg, var(--gold-bright), transparent);
-}
-    .eyebrow::before{content:"";width:60px;height:1px;background:linear-gradient(90deg, transparent, var(--gold-bright))}
-    .hero h1{margin:0;font-family:"Cormorant Garamond",serif;font-size:clamp(2rem, 3.2vw, 3rem);font-weight:600;line-height:1.1;letter-spacing:.012em;color:#f3e5c6;max-width:14ch;text-shadow:0 10px 34px rgba(0,0,0,.42)}
-    .hero p{max-width:620px;margin:18px 0 0;font-size:1rem;color:#eee2cc}
-    .hero-subline{font-size:1rem;color:#f0d9a6;margin-top:14px;letter-spacing:.02em}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 24px;border-radius:999px;font-weight:500;transition:transform .28s ease, box-shadow .28s ease, border-color .28s ease, background .28s ease;will-change:transform}
-    .btn:hover{transform:translateY(-2px)}
-    .btn-primary{color:#111;background:linear-gradient(180deg, #e2bc74, #bd8d3f);box-shadow:0 16px 34px rgba(150,109,33,.28)}
-    .btn-secondary{color:var(--text);border:1px solid rgba(201,155,72,.4);background:rgba(0,0,0,.28);backdrop-filter:blur(8px)}
-    .hero-card{justify-self:stretch;max-width:none;width:100%;border-radius:28px;overflow:hidden;border:1px solid rgba(201,155,72,.24);background:linear-gradient(180deg, rgba(14,14,14,.84), rgba(8,8,8,.9));box-shadow:var(--shadow);min-height:100%;display:flex;flex-direction:column}
-    .hero-card-media{min-height:100%;height:100%;background:linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.30)),url("assets/office.png") center center / cover no-repeat}
-    .hero-card-body{padding:26px 28px 28px}
-    .hero-card h3{margin:0 0 10px;font-family:"Cormorant Garamond",serif;font-size:2rem;font-weight:600;color:#f0deb7}
-    .hero-card p{margin:0;color:#dacfb7;font-size:.98rem;max-width:none}
-
-    .hero-card-body{
-      background:linear-gradient(180deg, rgba(10,10,10,.76), rgba(8,8,8,.94));
-      border-top:1px solid rgba(201,155,72,.16);
+    :root {
+      --bg: #0f1724;
+      --bg-deep: #111827;
+      --bg-panel: rgba(18, 27, 42, 0.78);
+      --bg-panel-soft: rgba(23, 36, 56, 0.68);
+      --surface: rgba(255, 255, 255, 0.05);
+      --surface-2: rgba(255, 255, 255, 0.035);
+      --border: rgba(125, 148, 185, 0.22);
+      --border-strong: rgba(147, 197, 253, 0.28);
+      --blue: #2563eb;
+      --blue-bright: #60a5fa;
+      --blue-soft: #93c5fd;
+      --gold: #c9a227;
+      --gold-soft: #e3c86a;
+      --text: #eef4ff;
+      --text-soft: rgba(226, 236, 255, 0.78);
+      --text-dim: rgba(226, 236, 255, 0.62);
+      --shadow: 0 22px 55px rgba(2, 8, 23, 0.42);
+      --radius: 26px;
+      --max: 1240px;
     }
 
-    .hero-panel{
-      border-radius:28px;
-      border:1px solid rgba(201,155,72,.24);
-      background:linear-gradient(180deg, rgba(12,12,12,.82), rgba(8,8,8,.9));
-      backdrop-filter:blur(10px);
-      box-shadow:var(--shadow);
-      min-height:100%;
-      position:relative;
-      overflow:hidden;
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Inter, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.55;
     }
-    .hero-panel::before{
-      content:"";
-      position:absolute;
-      top:0;
-      left:0;
-      width:100%;
-      height:1px;
-      background:linear-gradient(90deg, transparent, rgba(224,183,104,.78), transparent);
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(10, 17, 28, 0.86), rgba(13, 24, 38, 0.78) 18%, rgba(15, 23, 36, 0.82) 45%, rgba(8, 14, 24, 0.9)),
+        url("assets/background-stars-swish.png") center top / cover no-repeat;
+      z-index: -3;
+      transform: scale(1.02);
     }
-    .hero-copy-panel{
-      padding:44px 40px 42px;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at top right, rgba(96, 165, 250, 0.10), transparent 28%),
+        radial-gradient(circle at 18% 20%, rgba(37, 99, 235, 0.08), transparent 24%),
+        radial-gradient(circle at bottom left, rgba(201, 162, 39, 0.04), transparent 22%);
+      z-index: -2;
+      pointer-events: none;
     }
-    .section{position:relative;padding:110px 0}
-    .section-tight{padding:90px 0}
-    .section-header{max-width:800px;margin-bottom:42px}
-    .section-header .kicker{
-  display:inline-flex;
-  align-items:center;
-  gap:12px;
-  text-transform:uppercase;
-  letter-spacing:.24em;
-  color:#e4cc98;
-  font-size:.78rem;
-  margin-bottom:14px;
-  flex-wrap:nowrap;
-  white-space:nowrap;
-}
-    .section-header .kicker::before,
-.section-header .kicker::after{
-  content:"";
-  width:44px;
-  height:1px;
-  display:block;
-}
-.section-header .kicker::before{
-  background:linear-gradient(90deg, transparent, var(--gold-bright));
-}
-.section-header .kicker::after{
-  background:linear-gradient(90deg, var(--gold-bright), transparent);
-}
-.section-header .kicker::after{
-  content:"";
-  width:44px;
-  height:1px;
-  background:linear-gradient(90deg, var(--gold-bright), transparent);
-}
-    .section h2{margin:0;font-family:"Cormorant Garamond",serif;font-size:clamp(2rem, 3.2vw, 3rem);line-height:1.1;font-weight:600;color:#f3e5c6}
-    .section-header p{margin:18px 0 0;font-size:1.04rem;color:var(--muted);max-width:720px}
-    .grid-2{display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:28px;align-items:center}
-    .split-visual{position:relative;border-radius:28px;overflow:hidden;min-height:560px;border:1px solid rgba(201,155,72,.16);box-shadow:var(--shadow);background:#0e0e0e}
-    .split-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-    .split-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.1), rgba(0,0,0,.48))}
-    .copy-panel{padding:16px 0 16px 14px}
-    .copy-panel p{color:var(--muted);font-size:1.03rem;margin:0 0 22px;max-width:640px}
-    .feature-list{display:grid;gap:16px;margin-top:28px}
-    .feature{display:grid;grid-template-columns:56px 1fr;gap:18px;padding:18px 18px 18px 0;border-top:1px solid rgba(201,155,72,.14)}
-.feature-number{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;color:#f0dba7;border:1px solid rgba(201,155,72,.28);background:linear-gradient(180deg, rgba(201,155,72,.08), rgba(201,155,72,.03));font-size:.95rem}
-    .feature:first-child{border-top:1px solid rgba(201,155,72,.22)}
-    
-    .feature h3{margin:0 0 5px;font-family:"Cormorant Garamond",serif;font-size:1.75rem;font-weight:600;color:#f0deb7}
-    .feature p{margin:0;color:var(--muted);font-size:.98rem}
-    .divider{width:min(calc(100% - 40px), var(--max));height:1px;margin:0 auto;background:linear-gradient(90deg, transparent, rgba(201,155,72,.64), transparent);box-shadow:0 0 22px rgba(201,155,72,.18)}
-    .cards{display:grid;grid-template-columns:repeat(4, minmax(0,1fr));gap:22px}
-    .card{position:relative;overflow:hidden;border-radius:24px;padding:28px 24px 30px;min-height:250px;border:1px solid rgba(201,155,72,.16);background:linear-gradient(180deg, rgba(18,18,18,.96), rgba(10,10,10,.96)),radial-gradient(circle at top, rgba(201,155,72,.12), transparent 40%);box-shadow:var(--shadow)}
-    .card::before{content:"";position:absolute;top:0;left:0;width:100%;height:1px;background:linear-gradient(90deg, transparent, rgba(224,183,104,.8), transparent)}
-    
-    .card h3{margin:16px 0 12px;font-family:"Cormorant Garamond",serif;font-size:1.9rem;line-height:1;font-weight:600;color:#f3e2bc}
-    .card p{margin:0;color:#cbbfa5;font-size:.98rem}
-    .tech-band{border-radius:30px;overflow:hidden;border:1px solid rgba(201,155,72,.18);background:url("assets/cybersecurity.jpeg") center center / cover no-repeat;box-shadow:var(--shadow)}
-    .tech-visuals{display:grid;gap:16px;align-content:start}
-    .tech-visual{position:relative;min-height:170px;border-radius:22px;overflow:hidden;border:1px solid rgba(201,155,72,.18);box-shadow:0 18px 40px rgba(0,0,0,.28);background:#0f0f0f}
-    .tech-visual img{width:100%;height:100%;object-fit:cover;display:block}
-    .tech-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.34));pointer-events:none}
-    .tech-band-inner{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:34px;padding:54px;background:linear-gradient(90deg, rgba(8,8,8,.72), rgba(8,8,8,.42))}
-    .tech-foundation-inner{
-  display:block;
-  padding:54px;
-  background:linear-gradient(90deg, rgba(8,8,8,.72), rgba(8,8,8,.42));
-}
-    .tech-foundation-visuals{
-  display:grid;
-  grid-template-columns:repeat(3, minmax(0,1fr));
-  gap:18px;
-  margin-top:28px;
-}
-.resident-concierge-visual-wrap{
-  margin-top:28px;
-}
-.resident-concierge-visual{
-  position:relative;
-  width:100%;
-  max-width:100%;
-  min-height:320px;
-  height:320px;
-  border-radius:22px;
-  overflow:hidden;
-  border:1px solid rgba(201,155,72,.18);
-  box-shadow:0 18px 40px rgba(0,0,0,.28);
-  background:#0f0f0f;
-}
-.resident-concierge-visual img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
-.resident-concierge-visual::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.34));
-  pointer-events:none;
-}
-    .tech-band p{margin:0;color:#d9cfba;font-size:1.03rem}
-    .tech-points{display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:14px;align-content:start}
-    .tech-point{padding:16px 18px;border-radius:18px;border:1px solid rgba(201,155,72,.14);background:rgba(8,8,8,.4);color:#e7dcc4;font-size:.96rem}
-    .construction{display:grid;grid-template-columns:minmax(0, 1.02fr) minmax(0, .98fr);gap:30px;align-items:stretch}
-    .construction-copy{padding-right:10px}
-    .construction-copy p{color:var(--muted);font-size:1.02rem;margin:0 0 18px}
-    .construction-visual{min-height:520px;border-radius:30px;overflow:hidden;border:1px solid rgba(201,155,72,.18);box-shadow:var(--shadow);background:linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.36)),url("assets/build_something.png") center center / cover no-repeat}
-    .quote-panel{border-radius:28px;overflow:hidden;position:relative;border:1px solid rgba(201,155,72,.18);box-shadow:var(--shadow);background:url("assets/office2.png") center center / cover no-repeat}
-    .quote-panel-inner{padding:62px 54px;background:linear-gradient(90deg, rgba(8,8,8,.74), rgba(8,8,8,.42))}
-    .quote-mark{font-family:"Cormorant Garamond",serif;font-size:5rem;line-height:.6;color:#d6b06a;margin-bottom:12px}
-    .quote-panel h2{max-width:13ch}
-    .quote-panel p{max-width:650px;color:#d7ccb6;font-size:1.05rem;margin:18px 0 0}
-    .cta{text-align:center;padding-top:106px;padding-bottom:130px}
-    .cta-wrap{max-width:860px;margin:0 auto}
-    .cta h2{max-width:none}
-    .cta p{color:var(--muted);font-size:1.06rem;max-width:700px;margin:18px auto 0}
-    .cta .hero-actions{justify-content:center;margin-top:34px}
-    .site-footer{border-top:1px solid rgba(201,155,72,.12);background:rgba(4,4,4,.9)}
-    .footer-inner{min-height:110px;display:flex;align-items:center;justify-content:space-between;gap:18px;color:#bcae90;font-size:.92rem}
-    .footer-brand{display:flex;align-items:center;gap:12px;color:#e6d4ad}
-    .footer-brand img{width:38px;height:38px}
-    .reveal{opacity:0;transform:translateY(42px);transition:opacity .9s ease, transform .9s ease}
-    .reveal.from-left{transform:translateX(-56px)} .reveal.from-right{transform:translateX(56px)} .reveal.visible{opacity:1;transform:none}
-    .nav-toggle{display:none;width:48px;height:48px;border-radius:50%;border:1px solid rgba(201,155,72,.3);background:rgba(0,0,0,.26);color:#f0dba7;font-size:1.2rem;cursor:pointer}
-    @media (max-width:1100px){.hero-grid,.grid-2,.construction,.tech-band-inner{grid-template-columns:1fr}.tech-foundation-visuals{grid-template-columns:repeat(3, minmax(0,1fr))}.hero-card{justify-self:start;max-width:100%}.hero-copy-panel{padding:34px 28px}.cards{grid-template-columns:repeat(2, minmax(0,1fr))}.split-visual{min-height:460px}.construction-visual{order:-1}}
-    @media (max-width:860px){.tech-visual{min-height:200px}.tech-foundation-visuals{grid-template-columns:1fr}.resident-concierge-visual{height:200px;min-height:200px}.nav-toggle{display:grid;place-items:center}.nav-links{position:absolute;top:86px;left:20px;right:20px;flex-direction:column;align-items:flex-start;padding:18px;border-radius:22px;border:1px solid rgba(201,155,72,.16);background:rgba(8,8,8,.96);box-shadow:var(--shadow);transform-origin:top;transform:scaleY(0);opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease}.nav-links.open{transform:scaleY(1);opacity:1;pointer-events:auto}.hero{padding-top:126px}.hero h1{max-width:11ch}.cards,.tech-points{grid-template-columns:1fr}.tech-band-inner,.quote-panel-inner{padding:36px 26px}.footer-inner{min-height:auto;padding:22px 0;flex-direction:column;align-items:flex-start}}
-    @media (max-width:640px){.container{width:min(calc(100% - 24px), var(--max))}.hero{min-height:auto;padding-bottom:70px}.brand-copy strong{font-size:1.45rem}.brand-copy span{letter-spacing:.24em}.hero p,.hero-subline,.section-header p,.cta p,.copy-panel p,.construction-copy p{font-size:1rem}.section{padding:84px 0}.hero-card-media{height:210px}.hero-actions .btn{width:100%}}
+
+    .page-shell { position: relative; z-index: 1; }
+    .container { width: min(calc(100% - 40px), var(--max)); margin: 0 auto; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(180deg, rgba(10, 18, 31, 0.9), rgba(10, 18, 31, 0.68));
+      border-bottom: 1px solid rgba(147, 197, 253, 0.14);
+    }
+
+    .topbar-inner {
+      width: min(calc(100% - 40px), var(--max));
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 22px;
+      padding: 14px 0;
+    }
+
+    .brand-mark {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .brand-mark strong {
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    .brand-mark span {
+      font-size: 0.7rem;
+      color: var(--text-dim);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .nav a {
+      color: var(--text-soft);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.25s ease;
+    }
+
+    .nav a:hover { color: var(--blue-soft); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(96, 165, 250, 0.34);
+      background: linear-gradient(180deg, rgba(37, 99, 235, 0.26), rgba(37, 99, 235, 0.12));
+      color: var(--text);
+      text-decoration: none;
+      box-shadow: 0 0 24px rgba(37, 99, 235, 0.14);
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      border-color: rgba(147, 197, 253, 0.58);
+      box-shadow: 0 10px 30px rgba(37, 99, 235, 0.20);
+      background: linear-gradient(180deg, rgba(37, 99, 235, 0.34), rgba(37, 99, 235, 0.16));
+    }
+
+    .hero { padding: 72px 0 48px; }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .glass-card {
+      background: linear-gradient(180deg, var(--bg-panel), var(--bg-panel-soft));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-copy {
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 620px;
+    }
+
+    .eyebrow {
+      margin: 0 0 16px;
+      color: var(--blue-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.76rem;
+      font-weight: 700;
+    }
+
+    h1, h2, h3, h4, p { margin-top: 0; }
+
+    h1 {
+      font-size: clamp(2rem, 3vw, 3rem);
+      line-height: 1.05;
+      margin-bottom: 16px;
+      max-width: 18ch;
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      letter-spacing: -0.01em;
+    }
+
+    .hero-copy .lead {
+      color: var(--text-soft);
+      font-size: 1.08rem;
+      max-width: 60ch;
+      margin-bottom: 28px;
+    }
+
+    .slogan {
+      font-style: italic;
+      color: var(--blue-soft);
+      font-size: 1.04rem;
+      margin-bottom: 30px;
+      max-width: 54ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .hero-notes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 4px;
+    }
+
+    .hero-note {
+      padding: 18px;
+      background: var(--surface);
+      border: 1px solid rgba(147, 197, 253, 0.14);
+      border-radius: 18px;
+    }
+
+    .hero-note strong {
+      color: var(--blue-soft);
+      display: block;
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+    }
+
+    .hero-note span {
+      color: var(--text-soft);
+      font-size: 0.88rem;
+    }
+
+    .hero-visual {
+      min-height: 620px;
+      position: relative;
+      background:
+        linear-gradient(180deg, rgba(10, 18, 31, 0.12), rgba(10, 18, 31, 0.38)),
+        url("assets/hero-commercial-building.png") center center / cover no-repeat;
+    }
+
+    .hero-badge {
+      position: absolute;
+      right: 24px;
+      bottom: 24px;
+      width: min(330px, calc(100% - 48px));
+      padding: 22px 24px;
+      border-radius: 24px;
+      border: 1px solid rgba(147, 197, 253, 0.20);
+      background: linear-gradient(180deg, rgba(15, 23, 36, 0.78), rgba(15, 23, 36, 0.56));
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-badge strong {
+      display: block;
+      color: var(--text);
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .hero-badge span {
+      color: var(--text-soft);
+      font-size: 0.92rem;
+    }
+
+    .divider {
+      width: min(92%, 1160px);
+      margin: 4px auto 20px;
+      opacity: 0.95;
+      filter: drop-shadow(0 0 10px rgba(96, 165, 250, 0.16));
+    }
+
+    .divider img {
+      width: 100%;
+      display: block;
+    }
+
+    section { padding: 8px 0 30px; }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 26px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(2rem, 3vw, 3rem);
+      margin-bottom: 10px;
+    }
+
+    .section-head p {
+      color: var(--text-soft);
+      font-size: 1.03rem;
+    }
+
+    .split-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+      align-items: center;
+    }
+
+    .image-panel {
+      height: 100%;
+      min-height: 520px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      background-color: rgba(17, 24, 39, 0.76);
+    }
+
+    .image-panel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .content-card { padding: 34px; }
+
+    .content-card p {
+      color: var(--text-soft);
+      font-size: 1rem;
+    }
+
+    .feature-list {
+      padding: 0;
+      margin: 22px 0 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .feature-list li {
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: var(--surface-2);
+      border: 1px solid rgba(147, 197, 253, 0.12);
+      color: var(--text-soft);
+    }
+
+    .cards-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .cards-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .info-card,
+    .process-card { padding: 30px; min-height: 100%; }
+
+    .stack-card { padding: 24px; min-height: 220px; }
+
+    .info-card h3,
+    .stack-card h3,
+    .process-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .info-card p,
+    .stack-card p,
+    .process-card p {
+      color: var(--text-soft);
+      font-size: 0.96rem;
+      margin-bottom: 0;
+    }
+
+    .step-number {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: inline-grid;
+      place-items: center;
+      margin-bottom: 16px;
+      color: #0f1724;
+      background: linear-gradient(180deg, var(--blue-soft), var(--blue-bright));
+      font-weight: 800;
+      box-shadow: 0 0 18px rgba(96, 165, 250, 0.22);
+    }
+
+    .stack-card strong {
+      display: inline-block;
+      color: var(--gold-soft);
+      margin-bottom: 10px;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .quote-band {
+      padding: 36px;
+      text-align: center;
+      font-size: clamp(1.3rem, 2vw, 2rem);
+      font-style: italic;
+      color: var(--blue-soft);
+    }
+
+    .footer-cta {
+      position: relative;
+      min-height: 520px;
+      border-radius: 34px;
+      overflow: hidden;
+      border: 1px solid rgba(147, 197, 253, 0.18);
+      box-shadow: var(--shadow);
+      background:
+        linear-gradient(180deg, rgba(10, 18, 31, 0.22), rgba(10, 18, 31, 0.68)),
+        url("assets/build-together-construction.png") center center / cover no-repeat;
+      display: grid;
+      align-items: end;
+    }
+
+    .footer-cta-copy {
+      padding: 48px;
+      max-width: 760px;
+    }
+
+    .footer-cta h2 {
+      font-size: clamp(2.4rem, 4vw, 4.4rem);
+      line-height: 0.95;
+      margin-bottom: 14px;
+    }
+
+    .footer-cta p {
+      color: rgba(238, 244, 255, 0.88);
+      font-size: 1.05rem;
+      max-width: 56ch;
+      margin-bottom: 24px;
+    }
+
+    .footer-bar {
+      padding: 28px 0 40px;
+      color: rgba(226, 236, 255, 0.62);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .animate {
+      opacity: 0;
+      transition: opacity 0.9s ease, transform 0.9s ease, filter 0.9s ease;
+      filter: blur(8px);
+      will-change: transform, opacity;
+    }
+
+    .from-left { transform: translateX(-48px); }
+    .from-right { transform: translateX(48px); }
+    .from-bottom { transform: translateY(44px); }
+
+    .animate.in-view {
+      opacity: 1;
+      transform: translateX(0) translateY(0);
+      filter: blur(0);
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .split-grid,
+      .cards-4,
+      .cards-3,
+      .hero-notes {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cards-4 .stack-card:last-child,
+      .cards-3 .info-card:last-child {
+        grid-column: span 2;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .topbar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-grid,
+      .split-grid,
+      .cards-4,
+      .cards-3,
+      .hero-notes {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy,
+      .hero-visual,
+      .image-panel,
+      .footer-cta {
+        min-height: unset;
+      }
+
+      .hero-copy,
+      .content-card,
+      .quote-band,
+      .footer-cta-copy {
+        padding: 30px;
+      }
+
+      h1 { max-width: 13ch; }
+
+      .cards-4 .stack-card:last-child,
+      .cards-3 .info-card:last-child {
+        grid-column: auto;
+      }
+    }
   </style>
 </head>
 <body>
-  <header class="site-header" id="siteHeader">
-    <div class="container nav">
-      <a href="#top" class="brand" aria-label="Precision Innovation Technologies home">
-        <img src="assets/logo.png" alt="Precision Innovation Technologies logo" />
-        <div class="brand-copy">
-  <div>Precision Innovation Technologies</div>
-  <div class="brand-tagline">Your Total Technology Partner. Driven by Innovation. Delivered with Precision.</div>
-</div>
-      </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
-      <nav class="nav-links" id="navLinks">
-        <a href="#approach">Approach</a>
-        <a href="#services">Services</a>
-        <a href="#technology">Technology</a>
-        <a href="#build">Build Integration</a>
-        <a href="mailto:hello@precisioninnovationtechnologies.com?subject=Consultation%20Request&body=Name:%0AContact%20Number:%0ABrief%20Description:" class="nav-cta">Schedule a Consultation</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="hero-glow"></div>
-      <div class="container hero-grid">
-        <div class="hero-panel hero-copy-panel reveal from-left">
-          <div class="eyebrow">Luxury Residential Technology Concierge</div>
-          <h1>Your Total Technology Partner.<br>Driven by Innovation.<br>Delivered with Precision.</h1>
-          <div class="hero-subline">Enterprise-Level support for modern luxury living.</div>
-          <p>Precision Innovation Technologies provides a refined approach to technology management, cybersecurity, smart living integration, and ongoing advisory for residences and high-value environments where reliability, privacy, and experience matter.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="mailto:hello@precisioninnovationtechnologies.com?subject=Consultation%20Request&body=Name:%0AContact%20Number:%0ABrief%20Description:">Schedule a Private Consultation</a>
-            <a class="btn btn-secondary" href="#approach">Explore Our Approach</a>
-          </div>
-        </div>
-
-        <aside class="hero-card reveal from-right">
-          <div class="hero-card-media"></div>
-          <div class="hero-card-body">
-            <h3>Technology, curated for luxury living</h3>
-            <p>From secure connectivity and device oversight to smart environment coordination and digital protection, Precision Innovation Technologies brings modern technology under one trusted relationship.</p>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="section" id="approach">
-      <div class="container grid-2">
-        <div class="split-visual reveal from-left">
-          <img src="assets/butler.png" alt="White-gloved butler presenting technology" />
-        </div>
-
-        <div class="copy-panel reveal from-right">
-          <div class="section-header">
-            <div class="kicker">Our Approach</div>
-            <h2>A more thoughtful way to manage technology</h2>
-            <p>Precision Innovation Technologies is designed for clients who expect technology to feel seamless, protected, and professionally managed. We do not approach the environment like a typical reactive support provider. We approach it like a long-term partner responsible for continuity, protection, and quality of experience.</p>
-          </div>
-
-          <div class="feature-list">
-            <div class="feature">
-              
-              <div class="feature-number">•</div>
-              <div>
-                <h3>Higher standards</h3>
-                <p>Every detail is considered through the lens of quality, appearance, privacy, and long-term performance.</p>
-              </div>
-            </div>
-            <div class="feature">
-              
-              <div class="feature-number">•</div>
-              <div>
-                <h3>Executed with precision</h3>
-                <p>Design decisions, installations, support, and coordination are handled with structure, clarity, and care.</p>
-              </div>
-            </div>
-            <div class="feature">
-              
-              <div class="feature-number">•</div>
-              <div>
-                <h3>Proven results</h3>
-                <p>The objective is simple: a more secure, reliable, elegant environment that supports modern luxury living without friction.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-tight" id="services">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="kicker">Signature Services</div>
-          <h2>High-level support, precisely managed</h2>
-          <p>Precision Innovation Technologies keeps the experience elevated by focusing on outcomes, not clutter. Behind the scenes is a carefully managed technology foundation built to support privacy, convenience, reliability, and modern living.</p>
-        </div>
-
-        <div class="cards">
-          <article class="card reveal"><h3>Technology Management</h3><p>Ongoing oversight for connected devices, home office technology, network performance, and day-to-day continuity.</p></article>
-          <article class="card reveal"><h3>Cybersecurity &amp; Protection</h3><p>Safeguards for devices, accounts, identity, access, and sensitive digital activity across the modern residential environment.</p></article>
-          <article class="card reveal"><h3>Smart Living Integration</h3><p>Support and coordination for the systems that power convenience, access, connectivity, and the overall experience of the residence.</p></article>
-          <article class="card reveal"><h3>Trusted Advisory</h3><p>A long-term relationship centered on informed recommendations, responsive guidance, and a more intentional technology strategy.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-tight" id="positioning">
-      <div class="container">
-        <div class="grid-2">
-          <div class="hero-panel reveal from-left" style="padding:40px 36px; min-height:auto;">
-            <div class="section-header" style="margin-bottom:0; max-width:none;">
-              <div class="kicker">Resident Technology Concierge</div>
-              <h2>Designed for modern luxury residences</h2>
-              <p>Precision Innovation Technologies is built for high-value residential environments where technology is expected to be reliable, secure, and unobtrusive.</p>
-            </div>
-            <p style="color:var(--muted); font-size:1.02rem; margin:18px 0 0;">While many environments rely on fragmented vendors and reactive support, our approach introduces a more structured, concierge-level model designed to bring consistency, protection, and clarity to the experience.</p>
-            <p style="color:var(--muted); font-size:1.02rem; margin:18px 0 0;">We work alongside residents, property management, HOA leadership, and development stakeholders to support environments where technology is expected to meet a higher standard.</p>
-            <div class="resident-concierge-visual-wrap">
-              <div class="resident-concierge-visual">
-                <img src="assets/tablet_blueprint.png" alt="Tablet on an executive desk showing a residential technology blueprint" />
-              </div>
-            </div>
-          </div>
-
-          <div class="hero-panel reveal from-right" style="padding:40px 36px; min-height:auto;">
-            <div class="section-header" style="margin-bottom:0; max-width:none;">
-              <div class="kicker">Leadership & Experience</div>
-              <h2>Backed by more than 60 years of combined experience</h2>
-            </div>
-            <p style="color:var(--muted); font-size:1.02rem; margin:18px 0 0;">Behind the service is a leadership team with decades of experience across infrastructure, security, networking, cloud, and enterprise technology environments.</p>
-            <div class="feature-list" style="margin-top:24px;">
-              <div class="feature" style="grid-template-columns:1fr; padding-right:0;">
-                <div>
-                  <h3>Structured execution</h3>
-                  <p>Technology decisions, implementations, and support are handled with discipline, clarity, and long-term thinking.</p>
-                </div>
-              </div>
-              <div class="feature" style="grid-template-columns:1fr; padding-right:0;">
-                <div>
-                  <h3>Informed decision-making</h3>
-                  <p>Recommendations are shaped by real-world operational experience, not guesswork or one-size-fits-all templates.</p>
-                </div>
-              </div>
-              <div class="feature" style="grid-template-columns:1fr; padding-right:0;">
-                <div>
-                  <h3>Higher-standard reliability</h3>
-                  <p>The goal is a technology experience aligned with the expectations of modern luxury living and the stakeholders who support it.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="technology">
-      <div class="container">
-        <div class="tech-band reveal">
-          <div class="tech-foundation-inner">
-            <div class="section-header" style="margin-bottom:0">
-              <div class="kicker">Technology Foundation</div>
-              <h2>The technology behind the experience</h2>
-            </div>
-            <br>
-            <p>A seamless environment does not happen by accident. It is supported by secure connectivity, endpoint protection, identity controls, device management, monitoring, cloud-connected services, and carefully selected platforms working together with discipline. Precision Innovation Technologies brings that technology foundation into one coordinated experience, so the client benefits from the outcome without being burdened by the complexity behind it.</p>
-
-            <div class="tech-foundation-visuals">
-              <div class="tech-visual">
-                <img src="assets/identity.png" alt="Identity and access protection visual" />
-              </div>
-              <div class="tech-visual">
-                <img src="assets/finances.png" alt="Financial and digital asset protection visual" />
-              </div>
-              <div class="tech-visual">
-                <img src="assets/living_area.png" alt="Luxury smart living environment visual" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="build">
-      <div class="container construction">
-        <div class="construction-copy reveal from-left">
-          <div class="section-header">
-            <div class="kicker">Build Integration</div>
-            <h2>Designed early. Delivered properly.</h2>
-            <p>Precision Innovation Technologies is not limited to supporting finished spaces. We can align with new developments, luxury buildouts, and major property upgrades to help ensure the technology foundation is considered from the start.</p>
-          </div>
-          <p>That includes planning around connectivity, technology placement, access strategy, protected infrastructure, and the overall coordination needed for a more polished final environment.</p>
-          <p>By engaging earlier in the lifecycle, clients and stakeholders avoid many of the compromises that happen when technology is added as an afterthought.</p>
-          <p>The result is a residence that looks cleaner, performs better, and supports a more refined ownership experience from day one.</p>
-        </div>
-
-        <div class="construction-visual reveal from-right" aria-label="Construction site at sunset representing early technology planning"></div>
-      </div>
-    </section>
-
-    <section class="section section-tight">
-      <div class="container">
-        <div class="quote-panel reveal">
-          <div class="quote-panel-inner">
-            
-            <div class="section-header" style="margin-bottom:0">
-              <div class="kicker">Who We Serve</div>
-              <h2>For clients who value continuity, privacy, and confidence</h2>
-              <p>Precision Innovation Technologies is built for individuals, households, and luxury environments where technology should support the lifestyle without becoming the burden. The relationship is consultative, the execution is measured, and the objective is always a secure, polished, dependable experience.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section cta" id="consultation">
-  <div class="container cta-wrap reveal">
-    <div style="border-radius:28px; border:1px solid rgba(201,155,72,.18); background:linear-gradient(180deg, rgba(12,12,12,.82), rgba(8,8,8,.9)); padding:42px 36px; box-shadow:var(--shadow);">
-      <div class="section-header" style="margin:0 auto">
-        <div class="kicker" style="justify-content:center">Private Consultation</div>
-        <h2>Let’s design the right environment</h2>
-        <p>Whether you are planning a new luxury residence, refining an existing environment, or looking for a more complete approach to technology and cybersecurity, Precision Innovation Technologies offers a more thoughtful path forward.</p>
-      </div>
-
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="mailto:hello@precisioninnovationtechnologies.com?subject=Consultation%20Request&body=Name:%0AContact%20Number:%0ABrief%20Description:">Start the Conversation</a>
-        <a class="btn btn-secondary" href="#top">Back to Top</a>
+<div class="page-shell">
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand-mark">
+      <img src="assets/logo.png" alt="Innovative Precision Technologies Logo" style="height:64px;width:auto;">
+      <div class="brand-text">
+        <strong style="font-size:1rem;">Innovative Precision Technologies</strong>
+        <span style="font-size:0.75rem;color:rgba(226,236,255,0.72);">
+          Your Total Technology Partner. Driven by Innovation. Delivered with Precision.
+        </span>
       </div>
     </div>
+    <nav class="nav">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#stack">Platform</a>
+      <a href="#residential">Residential</a>
+      <a href="#build">Build Together</a>
+    </nav>
   </div>
-</section>
-  </main>
+</header>
 
-  <footer class="site-footer">
-  <div class="container footer-inner" style="justify-content:center; text-align:center; flex-direction:column; gap:8px;">
-    <div>© 2026 Precision Innovation Technologies. All rights reserved.</div>
-    <div style="font-size:.85rem; color:#9f9278;">
-      Featuring <a href="https://innovativeprecisiontechnologies.com" target="_blank" rel="noopener noreferrer" style="color:#d4af37; text-decoration:none;">Innovative Precision Technologies</a>, a division of Precision Innovation Technologies
+<main>
+  <section class="hero container">
+    <div class="hero-grid">
+      <div class="glass-card hero-copy animate from-left">
+        <h1>Your Total Technology Partner.</h1>
+        <h1>Driven by Innovation.</h1>
+        <h1>Delivered with Precision.</h1>
+        <p class="lead">
+          Innovative Precision Technologies blends infrastructure, security, networking, cloud strategy, and white-glove support into one polished delivery model for commercial, residential, and project-based environments.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="#services">Explore Services</a>
+          <a class="btn" href="#build">Start a Conversation</a>
+        </div>
+        <div class="hero-notes">
+          <div class="hero-note">
+            <strong>Infrastructure</strong>
+            <span>Architecture-minded systems delivery shaped by real operational experience.</span>
+          </div>
+          <div class="hero-note">
+            <strong>Security</strong>
+            <span>Protection designed into the environment, not layered on after the fact.</span>
+          </div>
+          <div class="hero-note">
+            <strong>Cloud & Network</strong>
+            <span>Practical modernization guided by resilience, visibility, and uptime.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card hero-visual animate from-right">
+        <div class="hero-badge">
+          <strong>Built for elevated environments</strong>
+          <span>Commercial operations, executive residences, cybersecurity services, and project-led technology integration.</span>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <div class="divider"><img src="assets/section-divider-gold-line.png" alt="Divider line" /></div>
+
+  <section id="services" class="container">
+    <div class="section-head animate from-bottom">
+      <p class="eyebrow">Core Positioning</p>
+      <h2>Not a typical MSP. A precision-led technology partner.</h2>
+      <p>
+        We approach technology with an engineering mindset, not a checklist. Every environment is assessed, designed, and supported based on real-world requirements, not templated solutions.
+
+        Our work spans infrastructure, security, networking, and cloud, allowing us to build systems that are stable, secure, and aligned with how your business actually operates, not how a standard service model expects it to.
+      </p>
+    </div>
+
+    <div class="cards-3">
+      <article class="glass-card info-card animate from-left">
+        <h3>Commercial IT</h3>
+        <p>Operationally mature support for offices, multi-site businesses, and executive environments where reliability, response, and continuity matter.</p>
+      </article>
+      <article class="glass-card info-card animate from-bottom">
+        <h3>Residential IT & Security</h3>
+        <p>Comprehensive support for home networks, devices, security, and connectivity, designed for performance, protection, and ease of use.</p>
+      </article>
+      <article class="glass-card info-card animate from-right">
+        <h3>Security & Advisory</h3>
+        <p>Cybersecurity services, hardening, recovery readiness, email security, identity protection, backup strategy, and architecture guidance under one umbrella.</p>
+      </article>
+    </div>
+  </section>
+
+  <div class="divider"><img src="assets/section-divider-gold-line.png" alt="Divider line" /></div>
+
+  <section class="container">
+    <div class="split-grid">
+      <div class="image-panel animate from-left">
+        <img src="assets/network-services.png" alt="Skilled technician performing services at a server rack." />
+      </div>
+      <div class="glass-card content-card animate from-right">
+        <p class="eyebrow">Commercial Technology Services</p>
+        <h2>Built for performance.</h2>
+        <h2>Operated with precision.</h2>
+        <ul class="feature-list">
+          <li>Structured IT support backed by proven MSP processes and tooling</li>
+          <li>Coverage across infrastructure, systems, networking, security, and cloud environments</li>
+          <li>Designed for organizations that need dependable performance, clear accountability, and scalable support</li>
+          <li>Ideal for organizations that value responsiveness, consistency, and trust.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"><img src="assets/section-divider-gold-line.png" alt="Divider line" /></div>
+
+  <section>
+    <div class="container">
+      <div class="section-head animate from-bottom">
+        <p class="eyebrow">Process</p>
+        <h2>A structured approach to precision, consistency, and long-term resilience.</h2>
+        <p>
+          Our process is built around <strong>assessment, architecture, deployment, and defense</strong>, creating environments that are intentionally designed, not assembled.
+        </p>
+      </div>
+
+      <div id="process" class="cards-4">
+        <article class="glass-card process-card animate from-left">
+          <div class="step-number">1</div>
+          <h3>Assess</h3>
+          <p>Understand the environment, expectations, risk profile, current friction points, and what a premium experience actually requires.</p>
+        </article>
+        <article class="glass-card process-card animate from-left">
+          <div class="step-number">2</div>
+          <h3>Architect</h3>
+          <p>Design a fit-for-purpose solution across systems, security, network, cloud, and support workflows rather than forcing a template.</p>
+        </article>
+        <article class="glass-card process-card animate from-bottom">
+          <div class="step-number">3</div>
+          <h3>Deploy</h3>
+          <p>Implement cleanly with minimal disruption, clear ownership, and a finished environment that feels intentional from day one.</p>
+        </article>
+        <article class="glass-card process-card animate from-right">
+          <div class="step-number">4</div>
+          <h3>Defend</h3>
+          <p>Maintain posture with monitoring, backup, identity protection, endpoint controls, email security, and ongoing operational visibility.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"><img src="assets/section-divider-gold-line.png" alt="Divider line" /></div>
+
+  <section>
+    <div class="container">
+      <div class="section-head animate from-bottom">
+        <p class="eyebrow">Security Operations</p>
+        <h2>Cybersecurity built into the foundation.</h2>
+        <p>
+          Protection is not treated as an add-on. It is embedded across endpoints, identity, email, backup, and infrastructure, creating environments that are secure, visible, and resilient by design.
+        </p>
+      </div>
+
+      <div class="split-grid">
+        <div class="glass-card content-card animate from-left">
+          <p class="eyebrow">Cybersecurity Operations</p>
+          <h2>Built for protection.</h2>
+          <h2>Engineered for resilience.</h2>
+          <ul class="feature-list">
+            <li>24/7 monitoring and response readiness through layered endpoint and SOC-aligned tooling.</li>
+            <li>Identity, email, backup, and hardening controls that align with executive and business risk.</li>
+            <li>Practical visibility across assets, vulnerabilities, documentation, and remote support operations.</li>
+            <li>Structured incident response and remediation processes to contain, resolve, and prevent recurring issues.</li>
+          </ul>
+        </div>
+        <div class="image-panel animate from-right">
+          <img src="assets/cybersecurity-command-center.png" alt="Technician working in a server environment with a cybersecurity visual treatment" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"><img src="assets/section-divider-gold-line.png" alt="Divider line" /></div>
+
+  <section id="stack" class="container">
+    <div class="section-head animate from-bottom">
+      <p class="eyebrow">Service Platform</p>
+      <h2>The technology behind the service.</h2>
+      <p>
+        Our platform combines industry-proven tools across security, monitoring, documentation, and recovery to deliver consistent, reliable support without unnecessary complexity.
+      </p>
+    </div>
+
+    <div class="cards-4">
+      <article class="glass-card stack-card animate from-left">
+        <strong>Detection & Response</strong>
+        <h3>SentinelOne Complete</h3>
+        <p>Endpoint protection with 24/7 SOC monitoring for business and executive environments that cannot afford uncertainty.</p>
+      </article>
+      <article class="glass-card stack-card animate from-left">
+        <strong>Remote Operations</strong>
+        <h3>ConnectWise RMM & ScreenConnect</h3>
+        <p>Secure remote management, maintenance, and support delivery designed to keep service responsive and unobtrusive.</p>
+      </article>
+      <article class="glass-card stack-card animate from-bottom">
+        <strong>Documentation & Recovery</strong>
+        <h3>ITGlue & Cove Backup</h3>
+        <p>Structured knowledge and recoverability that reduce chaos, accelerate support, and improve business continuity.</p>
+      </article>
+      <article class="glass-card stack-card animate from-right">
+        <strong>Security Layers</strong>
+        <h3>Proofpoint, Keeper, Wazuh</h3>
+        <p>Email protection, credential security, and infrastructure visibility that strengthen the environment around the endpoint.</p>
+      </article>
+    </div>
+  </section>
+
+  <div class="divider"><img src="assets/section-divider-gold-line.png" alt="Divider line" /></div>
+
+  <section id="residential" class="container">
+    <div class="split-grid">
+      <div class="image-panel animate from-left">
+        <img src="assets/residential-neighborhood.png" alt="Luxury residential neighborhood illuminated at twilight" />
+      </div>
+      <div class="glass-card content-card animate from-right">
+        <p class="eyebrow">Residential & Home Office Technology</p>
+        <h2>Technology that supports the way you live and work.</h2>
+        <p>
+          Modern homes often function as both living spaces and work environments. We design and support technology that keeps connectivity stable, systems secure, and daily operations running without disruption.
+        </p>
+        <ul class="feature-list">
+          <li>Support for home offices and home-based businesses that rely on consistent, secure performance.</li>
+          <li>Reliable connectivity, endpoint protection, backup strategy, and ongoing support.</li>
+          <li>Clean, well-integrated solutions that improve usability without adding complexity.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"><img src="assets/section-divider-gold-line.png" alt="Divider line" /></div>
+
+  <section class="container">
+    <div class="cards-3">
+      <article class="glass-card info-card animate from-left">
+        <h3>Mike</h3>
+        <p>Infrastructure & Security Architecture</p>
+        <p>Over 30 years of experience across systems, security, and enterprise operations, with a focus on hardening environments, improving visibility, and delivering structured, security-first solutions.</p>
+      </article>
+      <article class="glass-card info-card animate from-bottom">
+        <h3>Steve</h3>
+        <p>Network & Cloud Architect</p>
+        <p>25 years of experience in network engineering and cloud platforms, delivering secure, high-performance infrastructure with a focus on scalability, reliability, and modern network design.</p>
+      </article>
+      <article class="glass-card info-card animate from-right">
+        <h3>Integrated Expertise</h3>
+        <p>Combined expertise across infrastructure, security, networking, and cloud enables environments that are intentionally designed, not pieced together.</p>
+      </article>
+    </div>
+  </section>
+
+  <div class="divider"><img src="assets/section-divider-gold-line.png" alt="Divider line" /></div>
+
+  <section class="container">
+    <div class="glass-card quote-band animate from-bottom">
+      Precision where it matters. Presence where it counts. Protection throughout.
+    </div>
+  </section>
+
+  <div class="divider"><img src="assets/section-divider-gold-line.png" alt="Divider line" /></div>
+
+  <section id="build" class="container">
+    <div class="footer-cta animate from-bottom">
+      <div class="footer-cta-copy">
+        <p class="eyebrow">Project Delivery & Technology Integration</p>
+        <h2>Let’s build something together.</h2>
+        <p>
+          From new environments to modernization efforts, we partner with you to design, implement, and support technology solutions that align with your goals and scale with your needs.
+        </p>
+        <a class="btn" href="mailto:hello@precisioninnovationtechnologies.com">Start the conversation</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="container footer-bar">
+  Copyright © 2026 Innovative Precision Technologies | All Rights Reserved.
 </footer>
+</div>
 
-  <script>
-    const header = document.getElementById('siteHeader');
-    const navToggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
-    const updateHeader = () => { if (window.scrollY > 20) header.classList.add('scrolled'); else header.classList.remove('scrolled'); };
-    updateHeader();
-    window.addEventListener('scroll', updateHeader);
-    navToggle?.addEventListener('click', () => navLinks.classList.toggle('open'));
-    navLinks?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('open')));
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.16 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  </script>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.16 });
+
+  document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
-
