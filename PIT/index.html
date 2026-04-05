@@ -200,6 +200,34 @@
   gap:18px;
   margin-top:28px;
 }
+.resident-concierge-visual-wrap{
+  margin-top:28px;
+}
+.resident-concierge-visual{
+  position:relative;
+  width:100%;
+  max-width:100%;
+  min-height:320px;
+  height:320px;
+  border-radius:22px;
+  overflow:hidden;
+  border:1px solid rgba(201,155,72,.18);
+  box-shadow:0 18px 40px rgba(0,0,0,.28);
+  background:#0f0f0f;
+}
+.resident-concierge-visual img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.resident-concierge-visual::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.34));
+  pointer-events:none;
+}
     .tech-band p{margin:0;color:#d9cfba;font-size:1.03rem}
     .tech-points{display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:14px;align-content:start}
     .tech-point{padding:16px 18px;border-radius:18px;border:1px solid rgba(201,155,72,.14);background:rgba(8,8,8,.4);color:#e7dcc4;font-size:.96rem}
@@ -225,7 +253,7 @@
     .reveal.from-left{transform:translateX(-56px)} .reveal.from-right{transform:translateX(56px)} .reveal.visible{opacity:1;transform:none}
     .nav-toggle{display:none;width:48px;height:48px;border-radius:50%;border:1px solid rgba(201,155,72,.3);background:rgba(0,0,0,.26);color:#f0dba7;font-size:1.2rem;cursor:pointer}
     @media (max-width:1100px){.hero-grid,.grid-2,.construction,.tech-band-inner{grid-template-columns:1fr}.tech-foundation-visuals{grid-template-columns:repeat(3, minmax(0,1fr))}.hero-card{justify-self:start;max-width:100%}.hero-copy-panel{padding:34px 28px}.cards{grid-template-columns:repeat(2, minmax(0,1fr))}.split-visual{min-height:460px}.construction-visual{order:-1}}
-    @media (max-width:860px){.tech-visual{min-height:200px}.tech-foundation-visuals{grid-template-columns:1fr}.nav-toggle{display:grid;place-items:center}.nav-links{position:absolute;top:86px;left:20px;right:20px;flex-direction:column;align-items:flex-start;padding:18px;border-radius:22px;border:1px solid rgba(201,155,72,.16);background:rgba(8,8,8,.96);box-shadow:var(--shadow);transform-origin:top;transform:scaleY(0);opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease}.nav-links.open{transform:scaleY(1);opacity:1;pointer-events:auto}.hero{padding-top:126px}.hero h1{max-width:11ch}.cards,.tech-points{grid-template-columns:1fr}.tech-band-inner,.quote-panel-inner{padding:36px 26px}.footer-inner{min-height:auto;padding:22px 0;flex-direction:column;align-items:flex-start}}
+    @media (max-width:860px){.tech-visual{min-height:200px}.tech-foundation-visuals{grid-template-columns:1fr}.resident-concierge-visual{height:200px;min-height:200px}.nav-toggle{display:grid;place-items:center}.nav-links{position:absolute;top:86px;left:20px;right:20px;flex-direction:column;align-items:flex-start;padding:18px;border-radius:22px;border:1px solid rgba(201,155,72,.16);background:rgba(8,8,8,.96);box-shadow:var(--shadow);transform-origin:top;transform:scaleY(0);opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease}.nav-links.open{transform:scaleY(1);opacity:1;pointer-events:auto}.hero{padding-top:126px}.hero h1{max-width:11ch}.cards,.tech-points{grid-template-columns:1fr}.tech-band-inner,.quote-panel-inner{padding:36px 26px}.footer-inner{min-height:auto;padding:22px 0;flex-direction:column;align-items:flex-start}}
     @media (max-width:640px){.container{width:min(calc(100% - 24px), var(--max))}.hero{min-height:auto;padding-bottom:70px}.brand-copy strong{font-size:1.45rem}.brand-copy span{letter-spacing:.24em}.hero p,.hero-subline,.section-header p,.cta p,.copy-panel p,.construction-copy p{font-size:1rem}.section{padding:84px 0}.hero-card-media{height:210px}.hero-actions .btn{width:100%}}
   </style>
 </head>
@@ -333,6 +361,55 @@
           <article class="card reveal"><h3>Cybersecurity &amp; Protection</h3><p>Safeguards for devices, accounts, identity, access, and sensitive digital activity across the modern residential environment.</p></article>
           <article class="card reveal"><h3>Smart Living Integration</h3><p>Support and coordination for the systems that power convenience, access, connectivity, and the overall experience of the residence.</p></article>
           <article class="card reveal"><h3>Trusted Advisory</h3><p>A long-term relationship centered on informed recommendations, responsive guidance, and a more intentional technology strategy.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight" id="positioning">
+      <div class="container">
+        <div class="grid-2">
+          <div class="hero-panel reveal from-left" style="padding:40px 36px; min-height:auto;">
+            <div class="section-header" style="margin-bottom:0; max-width:none;">
+              <div class="kicker">Resident Technology Concierge</div>
+              <h2>Designed for modern luxury residences</h2>
+              <p>Precision Innovation Technologies is built for high-value residential environments where technology is expected to be reliable, secure, and unobtrusive.</p>
+            </div>
+            <p style="color:var(--muted); font-size:1.02rem; margin:18px 0 0;">While many environments rely on fragmented vendors and reactive support, our approach introduces a more structured, concierge-level model designed to bring consistency, protection, and clarity to the experience.</p>
+            <p style="color:var(--muted); font-size:1.02rem; margin:18px 0 0;">We work alongside residents, property management, HOA leadership, and development stakeholders to support environments where technology is expected to meet a higher standard.</p>
+            <div class="resident-concierge-visual-wrap">
+              <div class="resident-concierge-visual">
+                <img src="assets/tablet_blueprint.png" alt="Tablet on an executive desk showing a residential technology blueprint" />
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-panel reveal from-right" style="padding:40px 36px; min-height:auto;">
+            <div class="section-header" style="margin-bottom:0; max-width:none;">
+              <div class="kicker">Leadership & Experience</div>
+              <h2>Backed by more than 60 years of combined experience</h2>
+            </div>
+            <p style="color:var(--muted); font-size:1.02rem; margin:18px 0 0;">Behind the service is a leadership team with decades of experience across infrastructure, security, networking, cloud, and enterprise technology environments.</p>
+            <div class="feature-list" style="margin-top:24px;">
+              <div class="feature" style="grid-template-columns:1fr; padding-right:0;">
+                <div>
+                  <h3>Structured execution</h3>
+                  <p>Technology decisions, implementations, and support are handled with discipline, clarity, and long-term thinking.</p>
+                </div>
+              </div>
+              <div class="feature" style="grid-template-columns:1fr; padding-right:0;">
+                <div>
+                  <h3>Informed decision-making</h3>
+                  <p>Recommendations are shaped by real-world operational experience, not guesswork or one-size-fits-all templates.</p>
+                </div>
+              </div>
+              <div class="feature" style="grid-template-columns:1fr; padding-right:0;">
+                <div>
+                  <h3>Higher-standard reliability</h3>
+                  <p>The goal is a technology experience aligned with the expectations of modern luxury living and the stakeholders who support it.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
