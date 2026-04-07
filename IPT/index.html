@@ -259,9 +259,10 @@
 
     .hero-badge {
       position: absolute;
+      left: 24px;
       right: 24px;
       bottom: 24px;
-      width: min(330px, calc(100% - 48px));
+      width: auto;
       padding: 22px 24px;
       border-radius: 24px;
       border: 1px solid rgba(147, 197, 253, 0.20);
@@ -376,8 +377,13 @@
     .stack-card { padding: 24px; min-height: 220px; }
 
     .info-card h3,
-    .stack-card h3,
     .process-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+      color: var(--blue-soft);
+    }
+
+    .stack-card h3 {
       font-size: 1.3rem;
       margin-bottom: 8px;
       color: var(--text);
@@ -391,24 +397,13 @@
       margin-bottom: 0;
     }
 
-    .step-number {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      display: inline-grid;
-      place-items: center;
-      margin-bottom: 16px;
-      color: #0f1724;
-      background: linear-gradient(180deg, var(--blue-soft), var(--blue-bright));
-      font-weight: 800;
-      box-shadow: 0 0 18px rgba(96, 165, 250, 0.22);
-    }
+    /* Removed step-number styling as numbers are no longer used */
 
     .stack-card strong {
       display: inline-block;
-      color: #93c5fd;
+      color: var(--blue-soft);
       margin-bottom: 10px;
-      font-size: 0.92rem;
+      font-size: 1.3rem;
       font-weight: 700;
     }
 
@@ -437,6 +432,87 @@
     .footer-cta-copy {
       padding: 48px;
       max-width: 760px;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(96, 165, 250, 0.6);
+      background: rgba(15, 23, 36, 0.85);
+      color: var(--text);
+      font-size: 0.9rem;
+      outline: none;
+      transition: border 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: rgba(226, 236, 255, 0.9);
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--blue-soft);
+      background: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.25);
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--blue-soft);
+      box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+    }
+
+    .form-status {
+      min-height: 24px;
+      font-size: 0.9rem;
+      color: var(--text-soft);
+    }
+
+    .form-status.success {
+      color: #bde7c8;
+    }
+
+    .form-status.error {
+      color: #ffd0d0;
+    }
+
+    .hp-field {
+      position: absolute;
+      left: -9999px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .form-note {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      margin-top: 4px;
+    }
+
+    @media (max-width: 860px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     .footer-cta h2 {
@@ -583,8 +659,8 @@
 
       <div class="glass-card hero-visual animate from-right">
         <div class="hero-badge">
-          <strong>Built for elevated environments</strong>
-          <span>Commercial operations, executive residences, cybersecurity services, and project-led technology integration.</span>
+          <strong>Built for elevated and regulated environments</strong>
+          <span>Commercial operations, healthcare and hospital environments, financial and investment organizations, executive residences, cybersecurity services, and project-led technology integration.</span>
         </div>
       </div>
     </div>
@@ -654,22 +730,22 @@
 
       <div id="process" class="cards-4">
         <article class="glass-card process-card animate from-left">
-          <div class="step-number">1</div>
+          
           <h3>Assess</h3>
           <p>Understand the environment, expectations, risk profile, current friction points, and what a premium experience actually requires.</p>
         </article>
         <article class="glass-card process-card animate from-left">
-          <div class="step-number">2</div>
+          
           <h3>Architect</h3>
           <p>Design a fit-for-purpose solution across systems, security, network, cloud, and support workflows rather than forcing a template.</p>
         </article>
         <article class="glass-card process-card animate from-bottom">
-          <div class="step-number">3</div>
+          
           <h3>Deploy</h3>
           <p>Implement cleanly with minimal disruption, clear ownership, and a finished environment that feels intentional from day one.</p>
         </article>
         <article class="glass-card process-card animate from-right">
-          <div class="step-number">4</div>
+          
           <h3>Defend</h3>
           <p>Maintain posture with monitoring, backup, identity protection, endpoint controls, email security, and ongoing operational visibility.</p>
         </article>
@@ -766,31 +842,43 @@
   </section>
 
   <div class="divider"><img src="assets/section-divider-gold-line.png" alt="Divider line" /></div>
-
+  
   <section class="container">
-    <div class="cards-3">
-      <article class="glass-card info-card animate from-left">
-        <h3>Mike</h3>
-        <p>Infrastructure & Security Architecture</p>
-        <p>Over 30 years of experience across systems, security, and enterprise operations, with a focus on hardening environments, improving visibility, and delivering structured, security-first solutions.</p>
-      </article>
-      <article class="glass-card info-card animate from-bottom">
-        <h3>Steve</h3>
-        <p>Network & Cloud Architect</p>
-        <p>25 years of experience in network engineering and cloud platforms, delivering secure, high-performance infrastructure with a focus on scalability, reliability, and modern network design.</p>
-      </article>
-      <article class="glass-card info-card animate from-right">
-        <h3>Integrated Expertise</h3>
-        <p>Combined expertise across infrastructure, security, networking, and cloud enables environments that are intentionally designed, not pieced together.</p>
-      </article>
-    </div>
-  </section>
+  <div class="section-head">
+    <p class="eyebrow">Healthcare & Regulated Environments</p>
+    <h2>Experience where security, uptime, and reliability are critical</h2>
+    <p>
+      Innovative Precision Technologies brings real-world experience from medical, hospital, and regulated IT environments where systems must remain secure, available, and dependable at all times.
+    </p>
+    <p>
+      Our team combines more than 60 years of experience across IT, infrastructure, and cybersecurity, including over 21 years supporting healthcare and hospital-based technology environments.
+    </p>
+    <p>
+      We operate with strong familiarity across key compliance and security frameworks including HIPAA, HITECH, NIST, and SOC 2, ensuring that environments are not only functional, but aligned with regulatory expectations and industry best practices.
+    </p>
+  </div>
+
+  <div class="cards-3">
+    <article class="glass-card info-card">
+      <h3>Security & Compliance Awareness</h3>
+      <p>Experience supporting HIPAA-regulated environments with strong alignment to HITECH, NIST, and SOC 2 controls, focusing on data protection, access control, and audit readiness.</p>
+    </article>
+    <article class="glass-card info-card">
+      <h3>Operational Reliability</h3>
+      <p>Support models built around uptime, stability, and minimizing disruption in environments that cannot afford failure.</p>
+    </article>
+    <article class="glass-card info-card">
+      <h3>Real-World Healthcare Context</h3>
+      <p>Understanding of medical and clinical workflows, systems, and the expectations placed on technology in those environments.</p>
+    </article>
+  </div>
+</section>
 
   <div class="divider"><img src="assets/section-divider-gold-line.png" alt="Divider line" /></div>
 
   <section class="container">
     <div class="glass-card quote-band animate from-bottom">
-      Precision where it matters. Presence where it counts. Protection throughout.
+      <p class="section-intro">Precision where it matters. Presence where it counts. Protection throughout.</p>
     </div>
   </section>
 
@@ -804,7 +892,18 @@
         <p>
           From new environments to modernization efforts, we partner with you to design, implement, and support technology solutions that align with your goals and scale with your needs.
         </p>
-        <a class="btn" href="mailto:hello@precisioninnovationtechnologies.com">Start the conversation</a>
+        <form class="contact-form" id="contactForm" action="#" method="post" novalidate>
+          <div class="form-grid">
+            <input type="text" name="name" placeholder="Full Name" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <input type="tel" name="phone" placeholder="Phone Number" />
+          </div>
+          <input type="text" name="company" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <textarea name="message" rows="4" placeholder="Message" required></textarea>
+          <button type="submit" class="btn">Start the Conversation</button>
+          <div class="form-status" id="formStatus" aria-live="polite"></div>
+          <div class="form-note">We respect your time and privacy. No spam. No unnecessary follow-up.</div>
+        </form>
       </div>
     </div>
   </section>
@@ -832,6 +931,45 @@
   }, { threshold: 0.16 });
 
   document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+
+  const CONTACT_EMAIL = "hello@precisioninnovationtechnologies.com";
+  const contactForm = document.getElementById('contactForm');
+  const formStatus = document.getElementById('formStatus');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(contactForm);
+      const payload = Object.fromEntries(formData.entries());
+
+      if (payload.company) {
+        formStatus.textContent = 'Submission blocked.';
+        formStatus.className = 'form-status error';
+        return;
+      }
+
+      if (!payload.name || !payload.email || !payload.message) {
+        formStatus.textContent = 'Please complete the required fields.';
+        formStatus.className = 'form-status error';
+        return;
+      }
+
+      const subject = encodeURIComponent('New IPT Website Inquiry');
+      const body = encodeURIComponent(
+`Name: ${payload.name}
+Email: ${payload.email}
+Phone: ${payload.phone || ''}
+
+Message:
+${payload.message}`
+      );
+
+      window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+      formStatus.textContent = 'Your default mail app should open with your message populated.';
+      formStatus.className = 'form-status success';
+    });
+  }
 </script>
 </body>
 </html>
