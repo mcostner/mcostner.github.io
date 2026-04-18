@@ -312,11 +312,11 @@
     }
 
     .split-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 26px;
-      align-items: center;
-    }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+  align-items: stretch;
+}
 
     .image-panel {
       height: 100%;
@@ -336,7 +336,13 @@
       display: block;
     }
 
-    .content-card { padding: 34px; }
+    .content-card {
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
 
     .content-card p {
       color: var(--text-soft);
@@ -619,6 +625,7 @@
     </div>
     <nav class="nav">
       <a href="#services">Services</a>
+      <a href="#healthcare">Healthcare</a>
       <a href="#process">Process</a>
       <a href="#stack">Platform</a>
       <a href="#residential">Residential</a>
@@ -671,27 +678,64 @@
   <section id="services" class="container">
     <div class="section-head animate from-bottom">
       <p class="eyebrow">Core Positioning</p>
-      <h2>Not a typical MSP. A precision-led technology partner.</h2>
+      <h2>We design and support environments with security built in from the start.</h2>
       <p>
-        We approach technology with an engineering mindset, not a checklist. Every environment is assessed, designed, and supported based on real-world requirements, not templated solutions.
-
-        Our work spans infrastructure, security, networking, and cloud, allowing us to build systems that are stable, secure, and aligned with how your business actually operates, not how a standard service model expects it to.
+        We approach technology through the lens of risk, resilience, and operational integrity. Every environment is assessed, designed, secured, and supported based on real-world demands, not templated service models.
+      </p>
+      <p>
+        Our work spans infrastructure, cybersecurity, networking, cloud, and support operations, allowing us to deliver stable, secure, and accountable outcomes for organizations that need more than generic IT support.
       </p>
     </div>
 
-    <div class="cards-3">
+    <div class="cards-4">
       <article class="glass-card info-card animate from-left">
-        <h3>Commercial IT</h3>
-        <p>Operationally mature support for offices, multi-site businesses, and executive environments where reliability, response, and continuity matter.</p>
+        <h3>Healthcare & Regulated Environments</h3>
+        <p>Technology and security designed for medical, dental, outpatient, inpatient, urgent care, aesthetics, and regulated environments where uptime, compliance, and risk mitigation are critical.</p>
       </article>
       <article class="glass-card info-card animate from-bottom">
-        <h3>Residential IT & Security</h3>
-        <p>Comprehensive support for home networks, devices, security, and connectivity, designed for performance, protection, and ease of use.</p>
+        <h3>Commercial & Business Operations</h3>
+        <p>Operationally mature infrastructure and support for businesses that require consistency, accountability, and scalable performance across locations, teams, and growth stages.</p>
+      </article>
+      <article class="glass-card info-card animate from-bottom">
+        <h3>Residential & Executive Technology</h3>
+        <p>Secure, high-performance home and executive environments that support modern work, connectivity, privacy, and ease of use without unnecessary complexity.</p>
       </article>
       <article class="glass-card info-card animate from-right">
-        <h3>Security & Advisory</h3>
-        <p>Cybersecurity services, hardening, recovery readiness, email security, identity protection, backup strategy, and architecture guidance under one umbrella.</p>
+        <h3>Security & Risk Management</h3>
+        <p>Security embedded across identity, endpoints, email, backup, and infrastructure to reduce risk, improve visibility, and protect operational continuity.</p>
       </article>
+    </div>
+  </section>
+
+  <div class="divider"><img src="assets/section-divider-gold-line.png" alt="Divider line" /></div>
+
+  <section id="healthcare" class="container">
+    <div class="split-grid">
+      <div class="glass-card content-card animate from-left">
+        <p class="eyebrow">Healthcare & Regulated Environments</p>
+        <h2>Technology built for environments where failure is not an option.</h2>
+        <p>
+          Healthcare and regulated organizations need more than generic IT support. They need secure, stable, and well-structured environments aligned with clinical operations, compliance expectations, and the realities of high-impact daily use.
+        </p>
+        <p>
+          Innovative Precision Technologies brings over 21 years of real-world experience supporting medical and hospital-based technology environments, with a delivery model shaped by uptime demands, operational accountability, and security-first design.
+        </p>
+        <ul class="feature-list">
+          <li>Aligned with HIPAA, HITECH, NIST, and SOC 2 expectations</li>
+          <li>Relevant to dental, outpatient, inpatient, urgent care, aesthetics, and adjacent regulated practices</li>
+          <li>Infrastructure, endpoint, identity, and backup strategies designed with compliance and audit readiness in mind</li>
+          <li>Operational support built around uptime, continuity, and real-world patient-impact awareness</li>
+        </ul>
+        <div class="hero-note" style="margin-top:16px;">
+          <strong>Built on Real-World Healthcare Experience</strong>
+          <span>
+            Over two decades of hands-on experience supporting clinical and hospital environments where uptime, security, and operational continuity directly impact patient care.
+          </span>
+        </div>
+      </div>
+      <div class="image-panel animate from-right">
+        <img src="assets/healthcare-regulated-environments.png" alt="Modern healthcare environment with clean clinical design and advanced technology systems" />
+      </div>
     </div>
   </section>
 
@@ -707,79 +751,11 @@
         <h2>Built for performance.</h2>
         <h2>Operated with precision.</h2>
         <ul class="feature-list">
-          <li>Structured IT support backed by proven MSP processes and tooling</li>
+          <li>Structured technology support backed by proven operational processes and tooling</li>
           <li>Coverage across infrastructure, systems, networking, security, and cloud environments</li>
           <li>Designed for organizations that need dependable performance, clear accountability, and scalable support</li>
-          <li>Ideal for organizations that value responsiveness, consistency, and trust.</li>
+          <li>Ideal for businesses that value responsiveness, consistency, and trust</li>
         </ul>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"><img src="assets/section-divider-gold-line.png" alt="Divider line" /></div>
-
-  <section>
-    <div class="container">
-      <div class="section-head animate from-bottom">
-        <p class="eyebrow">Process</p>
-        <h2>A structured approach to precision, consistency, and long-term resilience.</h2>
-        <p>
-          Our process is built around <strong>assessment, architecture, deployment, and defense</strong>, creating environments that are intentionally designed, not assembled.
-        </p>
-      </div>
-
-      <div id="process" class="cards-4">
-        <article class="glass-card process-card animate from-left">
-          
-          <h3>Assess</h3>
-          <p>Understand the environment, expectations, risk profile, current friction points, and what a premium experience actually requires.</p>
-        </article>
-        <article class="glass-card process-card animate from-left">
-          
-          <h3>Architect</h3>
-          <p>Design a fit-for-purpose solution across systems, security, network, cloud, and support workflows rather than forcing a template.</p>
-        </article>
-        <article class="glass-card process-card animate from-bottom">
-          
-          <h3>Deploy</h3>
-          <p>Implement cleanly with minimal disruption, clear ownership, and a finished environment that feels intentional from day one.</p>
-        </article>
-        <article class="glass-card process-card animate from-right">
-          
-          <h3>Defend</h3>
-          <p>Maintain posture with monitoring, backup, identity protection, endpoint controls, email security, and ongoing operational visibility.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"><img src="assets/section-divider-gold-line.png" alt="Divider line" /></div>
-
-  <section>
-    <div class="container">
-      <div class="section-head animate from-bottom">
-        <p class="eyebrow">Security Operations</p>
-        <h2>Cybersecurity built into the foundation.</h2>
-        <p>
-          Protection is not treated as an add-on. It is embedded across endpoints, identity, email, backup, and infrastructure, creating environments that are secure, visible, and resilient by design.
-        </p>
-      </div>
-
-      <div class="split-grid">
-        <div class="glass-card content-card animate from-left">
-          <p class="eyebrow">Cybersecurity Operations</p>
-          <h2>Built for protection.</h2>
-          <h2>Engineered for resilience.</h2>
-          <ul class="feature-list">
-            <li>24/7 monitoring and response readiness through layered endpoint and SOC-aligned tooling.</li>
-            <li>Identity, email, backup, and hardening controls that align with executive and business risk.</li>
-            <li>Practical visibility across assets, vulnerabilities, documentation, and remote support operations.</li>
-            <li>Structured incident response and remediation processes to contain, resolve, and prevent recurring issues.</li>
-          </ul>
-        </div>
-        <div class="image-panel animate from-right">
-          <img src="assets/cybersecurity-command-center.png" alt="Technician working in a server environment with a cybersecurity visual treatment" />
-        </div>
       </div>
     </div>
   </section>
@@ -789,32 +765,32 @@
   <section id="stack" class="container">
     <div class="section-head animate from-bottom">
       <p class="eyebrow">Service Platform</p>
-      <h2>The technology behind the service.</h2>
+      <h2>Built on proven systems. Delivered with precision.</h2>
       <p>
-        Our platform combines industry-proven tools across security, monitoring, documentation, and recovery to deliver consistent, reliable support without unnecessary complexity.
+        Our delivery model is supported by a carefully selected platform of enterprise-grade tools across security, monitoring, documentation, and recovery. These systems are not the service, they enable consistent execution, visibility, and reliable outcomes across every environment we support.
       </p>
     </div>
 
     <div class="cards-4">
       <article class="glass-card stack-card animate from-left">
-        <strong>Detection & Response</strong>
+        <strong>Endpoint Protection</strong>
         <h3>SentinelOne Complete</h3>
-        <p>Endpoint protection with 24/7 SOC monitoring for business and executive environments that cannot afford uncertainty.</p>
+        <p>Advanced endpoint detection and response designed to prevent, detect, and contain threats in real time.</p>
       </article>
       <article class="glass-card stack-card animate from-left">
         <strong>Remote Operations</strong>
         <h3>ConnectWise RMM & ScreenConnect</h3>
-        <p>Secure remote management, maintenance, and support delivery designed to keep service responsive and unobtrusive.</p>
+        <p>Secure remote management and support delivery that keeps systems maintained without disrupting operations.</p>
       </article>
       <article class="glass-card stack-card animate from-bottom">
-        <strong>Documentation & Recovery</strong>
-        <h3>ITGlue & Cove Backup</h3>
-        <p>Structured knowledge and recoverability that reduce chaos, accelerate support, and improve business continuity.</p>
+        <strong>Continuity & Recovery</strong>
+        <h3>Cove Backup</h3>
+        <p>Reliable backup and recovery strategies designed to protect data and ensure rapid restoration when it matters most.</p>
       </article>
       <article class="glass-card stack-card animate from-right">
-        <strong>Security Layers</strong>
-        <h3>Proofpoint, Keeper, Wazuh</h3>
-        <p>Email protection, credential security, and infrastructure visibility that strengthen the environment around the endpoint.</p>
+        <strong>Email & Identity Security</strong>
+        <h3>Proofpoint & Keeper</h3>
+        <p>Layered protection for email and credentials to reduce risk, prevent compromise, and strengthen user-level security.</p>
       </article>
     </div>
   </section>
@@ -833,52 +809,19 @@
           Modern homes often function as both living spaces and work environments. We design and support technology that keeps connectivity stable, systems secure, and daily operations running without disruption.
         </p>
         <ul class="feature-list">
-          <li>Support for home offices and home-based businesses that rely on consistent, secure performance.</li>
-          <li>Reliable connectivity, endpoint protection, backup strategy, and ongoing support.</li>
-          <li>Clean, well-integrated solutions that improve usability without adding complexity.</li>
+          <li>Support for home offices and home-based businesses that rely on consistent, secure performance</li>
+          <li>Reliable connectivity, endpoint protection, backup strategy, and ongoing support</li>
+          <li>Clean, well-integrated solutions that improve usability without adding complexity</li>
         </ul>
       </div>
     </div>
   </section>
 
   <div class="divider"><img src="assets/section-divider-gold-line.png" alt="Divider line" /></div>
-  
-  <section class="container">
-  <div class="section-head">
-    <p class="eyebrow">Healthcare & Regulated Environments</p>
-    <h2>Experience where security, uptime, and reliability are critical.</h2>
-    <p>
-      Innovative Precision Technologies brings real-world experience from medical, hospital, and regulated IT environments where systems must remain secure, available, and dependable at all times.
-    </p>
-    <p>
-      Our team combines more than 60 years of experience across IT, infrastructure, and cybersecurity, including over 21 years supporting healthcare and hospital-based technology environments.
-    </p>
-    <p>
-      We operate with strong familiarity across key compliance and security frameworks including HIPAA, HITECH, NIST, and SOC 2, ensuring that environments are not only functional, but aligned with regulatory expectations and industry best practices.
-    </p>
-  </div>
-
-  <div class="cards-3">
-    <article class="glass-card info-card">
-      <h3>Security & Compliance Awareness</h3>
-      <p>Experience supporting HIPAA-regulated environments with strong alignment to HITECH, NIST, and SOC 2 controls, focusing on data protection, access control, and audit readiness.</p>
-    </article>
-    <article class="glass-card info-card">
-      <h3>Operational Reliability</h3>
-      <p>Support models built around uptime, stability, and minimizing disruption in environments that cannot afford failure.</p>
-    </article>
-    <article class="glass-card info-card">
-      <h3>Real-World Healthcare Context</h3>
-      <p>Understanding of medical and clinical workflows, systems, and the expectations placed on technology in those environments.</p>
-    </article>
-  </div>
-</section>
-
-  <div class="divider"><img src="assets/section-divider-gold-line.png" alt="Divider line" /></div>
 
   <section class="container">
     <div class="glass-card quote-band animate from-bottom">
-      <p class="section-intro">Precision where it matters. Presence where it counts. Protection throughout.</p>
+      <p class="section-intro">Secure. Stable. Resilient. Built to hold up when it matters most.</p>
     </div>
   </section>
 
