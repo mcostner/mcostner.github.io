@@ -381,6 +381,30 @@
       gap: 18px;
     }
 
+    .alignment-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .alignment-card {
+      padding: 18px;
+      min-height: 100%;
+    }
+
+    .alignment-card h3 {
+      font-size: 1.08rem;
+      margin-bottom: 8px;
+      color: var(--blue-soft);
+    }
+
+    .alignment-card p {
+      color: var(--text-soft);
+      font-size: 0.92rem;
+      margin-bottom: 0;
+    }
+
     .info-card,
     .process-card { padding: 30px; min-height: 100%; }
 
@@ -579,7 +603,8 @@
       .split-grid,
       .cards-4,
       .cards-3,
-      .hero-notes {
+      .hero-notes,
+      .alignment-grid {
         grid-template-columns: 1fr;
       }
 
@@ -621,11 +646,10 @@
     </div>
     <nav class="nav">
       <a href="#home">Home</a>
-      <a href="#services">Services</a>
+      <a href="#where-we-fit">Where We Fit</a>
       <a href="#healthcare">Healthcare</a>
       <a href="#commercial">Commercial</a>
       <a href="#stack">Platform</a>
-      <a href="#residential">Residential</a>
       <a href="#build">Contact</a>
     </nav>
   </div>
@@ -642,7 +666,7 @@
           Innovative Precision Technologies blends infrastructure, security, networking, cloud strategy, and white-glove support into one polished delivery model for commercial, residential, and project-based environments.
         </p>
         <div class="hero-actions">
-          <a class="btn" href="#services">Explore Services</a>
+          <a class="btn" href="#where-we-fit">Explore Services</a>
           <a class="btn" href="#build">Start a Conversation</a>
         </div>
         <div class="hero-notes">
@@ -672,35 +696,41 @@
 
   <div class="divider"><img src="assets/section-divider-gold-line.png" alt="Divider line" /></div>
 
-  <section id="services" class="container">
-    <div class="section-head animate from-bottom">
-      <p class="eyebrow">Core Positioning</p>
-      <h2>We design and support environments with security built in from the start.</h2>
-      <p>
-        We approach technology through the lens of risk, resilience, and operational integrity. Every environment is assessed, designed, secured, and supported based on real-world demands, not templated service models.
-      </p>
-      <p>
-        Our work spans infrastructure, cybersecurity, networking, cloud, and support operations, allowing us to deliver stable, secure, and accountable outcomes for organizations that need more than generic IT support.
-      </p>
-    </div>
+  <section id="where-we-fit" class="container">
+    <div class="split-grid">
+      <div class="image-panel animate from-left">
+        <img src="assets/where-we-fit.png" alt="Technology alignment for residential, commercial, healthcare, and financial environments" />
+      </div>
 
-    <div class="cards-4">
-      <article class="glass-card info-card animate from-left">
-        <h3>Healthcare & Regulated Environments</h3>
-        <p>Technology and security designed for medical, dental, outpatient, inpatient, urgent care, aesthetics, and regulated environments where uptime, compliance, and risk mitigation are critical.</p>
-      </article>
-      <article class="glass-card info-card animate from-bottom">
-        <h3>Commercial & Business Operations</h3>
-        <p>Operationally mature infrastructure and support for businesses that require consistency, accountability, and scalable performance across locations, teams, and growth stages.</p>
-      </article>
-      <article class="glass-card info-card animate from-bottom">
-        <h3>Residential & Executive Technology</h3>
-        <p>Secure, high-performance home and executive environments that support modern work, connectivity, privacy, and ease of use without unnecessary complexity.</p>
-      </article>
-      <article class="glass-card info-card animate from-right">
-        <h3>Security & Risk Management</h3>
-        <p>Security embedded across identity, endpoints, email, backup, and infrastructure to reduce risk, improve visibility, and protect operational continuity.</p>
-      </article>
+      <div class="glass-card content-card animate from-right">
+        <p class="eyebrow">Where We Fit</p>
+        <h2>We design and support environments with security built in from the start.</h2>
+        <p>
+          We approach technology through the lens of risk, resilience, and operational integrity. Every environment is assessed, designed, secured, and supported based on real-world demands, not templated service models.
+        </p>
+        <p>
+          Our work spans infrastructure, cybersecurity, networking, cloud, and support operations, allowing us to deliver stable, secure, and accountable outcomes across residential, commercial, healthcare, and high-trust business environments.
+        </p>
+
+        <div class="alignment-grid">
+          <article class="glass-card alignment-card">
+            <h3>Residential & Home Office Technology</h3>
+            <p>Secure connectivity, endpoint protection, backup, and support for modern home, remote work, and executive environments.</p>
+          </article>
+          <article class="glass-card alignment-card">
+            <h3>Commercial Business Operations</h3>
+            <p>Stable infrastructure, cloud, identity, endpoint, support, and continuity services for growing businesses.</p>
+          </article>
+          <article class="glass-card alignment-card">
+            <h3>Healthcare & Regulated Environments</h3>
+            <p>Security and compliance-aligned technology for medical, dental, outpatient, inpatient, urgent care, and adjacent regulated practices.</p>
+          </article>
+          <article class="glass-card alignment-card">
+            <h3>Financial & Investment Environments</h3>
+            <p>Higher-touch security, privacy, continuity, and advisory support for firms where trust and confidentiality are critical.</p>
+          </article>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -718,7 +748,7 @@
           Innovative Precision Technologies brings over 21 years of real-world experience supporting medical and hospital-based technology environments, with a delivery model shaped by uptime demands, operational accountability, and security-first design.
         </p>
         <ul class="feature-list">
-          <li>Aligned with HIPAA, HITECH, NIST, and SOC 2 expectations</li>
+          <li>Aligned with <b>HIPAA</b>, <b>HITECH</b>, <b>NIST</b>, and <b>SOC 2</b> expectations</li>
           <li>Relevant to dental, outpatient, inpatient, urgent care, aesthetics, and adjacent regulated practices</li>
           <li>Infrastructure, endpoint, identity, and backup strategies designed with compliance and audit readiness in mind</li>
           <li>Operational support built around uptime, continuity, and real-world patient-impact awareness</li>
@@ -789,28 +819,6 @@
         <h3>Proofpoint & Keeper</h3>
         <p>Layered protection for email and credentials to reduce risk, prevent compromise, and strengthen user-level security.</p>
       </article>
-    </div>
-  </section>
-
-  <div class="divider"><img src="assets/section-divider-gold-line.png" alt="Divider line" /></div>
-
-  <section id="residential" class="container">
-    <div class="split-grid">
-      <div class="image-panel animate from-left">
-        <img src="assets/residential-neighborhood.png" alt="Luxury residential neighborhood illuminated at twilight" />
-      </div>
-      <div class="glass-card content-card animate from-right">
-        <p class="eyebrow">Residential & Home Office Technology</p>
-        <h2>Technology that supports the way you live and work.</h2>
-        <p>
-          Modern homes often function as both living spaces and work environments. We design and support technology that keeps connectivity stable, systems secure, and daily operations running without disruption.
-        </p>
-        <ul class="feature-list">
-          <li>Support for home offices and home-based businesses that rely on consistent, secure performance</li>
-          <li>Reliable connectivity, endpoint protection, backup strategy, and ongoing support</li>
-          <li>Clean, well-integrated solutions that improve usability without adding complexity</li>
-        </ul>
-      </div>
     </div>
   </section>
 
