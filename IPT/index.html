@@ -39,6 +39,10 @@
       line-height: 1.55;
     }
 
+    [id] {
+      scroll-margin-top: 110px;
+    }
+
     body::before {
       content: "";
       position: fixed;
@@ -312,11 +316,11 @@
     }
 
     .split-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 26px;
-  align-items: stretch;
-}
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+      align-items: stretch;
+    }
 
     .image-panel {
       height: 100%;
@@ -337,12 +341,12 @@
     }
 
     .content-card {
-  padding: 34px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-}
+      padding: 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
 
     .content-card p {
       color: var(--text-soft);
@@ -402,8 +406,6 @@
       font-size: 0.96rem;
       margin-bottom: 0;
     }
-
-    /* Removed step-number styling as numbers are no longer used */
 
     .stack-card strong {
       display: inline-block;
@@ -476,12 +478,6 @@
       border-color: var(--blue-soft);
       background: rgba(255, 255, 255, 0.12);
       box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.25);
-    }
-
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      border-color: var(--blue-soft);
-      box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
     }
 
     .contact-form textarea {
@@ -624,18 +620,19 @@
       </div>
     </div>
     <nav class="nav">
+      <a href="#home">Home</a>
       <a href="#services">Services</a>
       <a href="#healthcare">Healthcare</a>
-      <a href="#process">Process</a>
+      <a href="#commercial">Commercial</a>
       <a href="#stack">Platform</a>
       <a href="#residential">Residential</a>
-      <a href="#build">Build Together</a>
+      <a href="#build">Contact</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <section class="hero container">
+  <section id="home" class="hero container">
     <div class="hero-grid">
       <div class="glass-card hero-copy animate from-left">
         <h1>Your Total Technology Partner.</h1>
@@ -741,7 +738,7 @@
 
   <div class="divider"><img src="assets/section-divider-gold-line.png" alt="Divider line" /></div>
 
-  <section class="container">
+  <section id="commercial" class="container">
     <div class="split-grid">
       <div class="image-panel animate from-left">
         <img src="assets/network-services.png" alt="Skilled technician performing services at a server rack." />
