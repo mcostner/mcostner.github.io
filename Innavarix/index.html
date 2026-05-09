@@ -694,14 +694,68 @@
       display: none;
       color: var(--white);
       border: 1px solid rgba(255,255,255,0.16);
-      background: transparent;
+      background: rgba(255,255,255,0.04);
       padding: 10px 12px;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.72rem;
+      z-index: 120;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 92px;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      background: rgba(5, 8, 11, 0.97);
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      border-bottom: 1px solid rgba(217, 166, 111, 0.22);
+      backdrop-filter: blur(16px);
+      padding: 18px 24px 24px;
+      transform: translateY(-12px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 180ms ease, transform 180ms ease;
+    }
+
+    .mobile-menu.open {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 13px 0;
+      color: rgba(247, 247, 244, 0.88);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.82rem;
+    }
+
+    .mobile-menu a:hover {
+      color: var(--gold-soft);
+    }
+
+    .mobile-menu .mobile-cta {
+      margin-top: 16px;
+      text-align: center;
+      color: #111;
+      border-bottom: none;
     }
 
     @media (max-width: 1100px) {
       .nav-links,
       .nav-actions {
         display: none;
+      }
+
+      .mobile-menu {
+        display: block;
       }
 
       .mega-menu {
@@ -952,7 +1006,19 @@
           <a class="button gold" href="#consultation">Schedule Consultation</a>
         </div>
 
-        <button class="mobile-toggle" aria-label="Open menu">Menu</button>
+        <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">Menu</button>
+      </div>
+
+      <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+        <a href="#top">Home</a>
+        <a href="#services">Services</a>
+        <a href="#services">Healthcare Solutions</a>
+        <a href="#security">Security & Compliance</a>
+        <a href="#about">About</a>
+        <a href="#insights">Insights</a>
+        <a href="#contact">Contact</a>
+        <a class="button gold mobile-cta" href="#consultation">Schedule Consultation</a>
+      </nav>
       </div>
     </header>
 
@@ -1121,6 +1187,25 @@
     </footer>
 
     <a class="floating-call" href="tel:18887856119" aria-label="Call INNAVARIX">☎</a>
+    <script>
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+      mobileMenuToggle.addEventListener('click', () => {
+        const isOpen = mobileMenu.classList.toggle('open');
+        mobileMenuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        mobileMenuToggle.textContent = isOpen ? 'Close' : 'Menu';
+      });
+
+      mobileMenuLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('open');
+          mobileMenuToggle.setAttribute('aria-expanded', 'false');
+          mobileMenuToggle.textContent = 'Menu';
+        });
+      });
+    </script>
   </div>
 </body>
 </html>
