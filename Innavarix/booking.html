@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schedule a Consultation | INNAVARIX</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="container nav">
+        <a class="brand" href="index.html" aria-label="INNAVARIX home">
+          <img src="images/header_logo.png" alt="INNAVARIX" style="width: 100%; max-width: 360px; height: auto; object-fit: contain;" />
+        </a>
+
+        <nav class="nav-links" aria-label="Primary navigation">
+          <div class="nav-item simple"><a class="nav-link no-arrow" href="index.html">Home</a></div>
+          <div class="nav-item simple"><a class="nav-link no-arrow" href="index.html#services">Services</a></div>
+          <div class="nav-item simple"><a class="nav-link no-arrow" href="index.html#services">Healthcare Solutions</a></div>
+          <div class="nav-item simple"><a class="nav-link no-arrow" href="index.html#security">Security & Compliance</a></div>
+          <div class="nav-item simple"><a class="nav-link no-arrow" href="about.html">About</a></div>
+          <div class="nav-item simple"><a class="nav-link no-arrow" href="index.html#insights">Insights</a></div>
+          <div class="nav-item simple"><a class="nav-link no-arrow" href="index.html#contact">Contact</a></div>
+        </nav>
+
+        <div class="nav-actions">
+          <a class="button gold" href="booking.html">Schedule Consultation</a>
+        </div>
+
+        <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">Menu</button>
+      </div>
+
+      <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+        <a class="mobile-menu-link" href="index.html">Home</a>
+
+        <div class="mobile-accordion">
+          <button class="mobile-accordion-trigger" type="button" aria-expanded="false">Services</button>
+          <div class="mobile-submenu">
+            <a href="index.html#services">Managed Healthcare IT</a>
+            <a href="index.html#services">Cybersecurity Services</a>
+            <a href="index.html#services">Microsoft Security Solutions</a>
+            <a href="index.html#services">vCISO Services</a>
+            <a href="index.html#services">Strategic Advisory</a>
+          </div>
+        </div>
+
+        <div class="mobile-accordion">
+          <button class="mobile-accordion-trigger" type="button" aria-expanded="false">Healthcare Solutions</button>
+          <div class="mobile-submenu">
+            <a href="index.html#services">Dental Practices</a>
+            <a href="index.html#services">Outpatient Clinics</a>
+            <a href="index.html#services">Specialty Healthcare</a>
+            <a href="index.html#services">Multi-Location Healthcare</a>
+          </div>
+        </div>
+
+        <div class="mobile-accordion">
+          <button class="mobile-accordion-trigger" type="button" aria-expanded="false">Security & Compliance</button>
+          <div class="mobile-submenu">
+            <a href="index.html#security">HIPAA Awareness</a>
+            <a href="index.html#security">Identity Security</a>
+            <a href="index.html#security">MFA & Conditional Access</a>
+            <a href="index.html#security">Vulnerability Management</a>
+            <a href="index.html#security">Business Continuity</a>
+          </div>
+        </div>
+
+        <a class="mobile-menu-link" href="about.html">About</a>
+        <a class="mobile-menu-link" href="index.html#insights">Insights</a>
+        <a class="mobile-menu-link" href="index.html#contact">Contact</a>
+        <a class="button gold mobile-cta" href="booking.html">Schedule Consultation</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="section light-section" style="padding-top: 170px;">
+        <div class="container" style="max-width: 1080px;">
+          <div class="section-header" style="text-align: left; margin-left: 0; max-width: 850px;">
+            <div class="eyebrow" style="color: var(--gold-dark);">Schedule a Consultation</div>
+            <h1 style="color: #111820; font-size: clamp(2.5rem, 5vw, 4.8rem);">Let’s Talk About Your Healthcare Technology Strategy</h1>
+            <p>Use this page to request a consultation with INNAVARIX. We will review your needs, discuss your current environment, and determine whether our services are the right fit.</p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 0.8fr; gap: 34px; align-items: start;">
+            <div style="background: rgba(255,255,255,0.55); border: 1px solid rgba(166, 111, 57, 0.22); padding: 42px; color: #26323c;">
+              <h2>Request a Consultation</h2>
+              <p style="margin-top: 12px;">Complete the form below and we will follow up to coordinate a time.</p>
+
+              <form action="https://formspree.io/f/mzdokqla" method="POST" style="margin-top: 28px; display: grid; gap: 18px;">
+                <div>
+                  <label for="name" style="display: block; font-weight: 700; margin-bottom: 6px;">Full Name</label>
+                  <input id="name" name="name" type="text" required style="width: 100%; min-height: 46px; padding: 10px 12px; border: 1px solid rgba(17,24,32,0.18); background: rgba(255,255,255,0.85);" />
+                </div>
+
+                <div>
+                  <label for="organization" style="display: block; font-weight: 700; margin-bottom: 6px;">Organization</label>
+                  <input id="organization" name="organization" type="text" required style="width: 100%; min-height: 46px; padding: 10px 12px; border: 1px solid rgba(17,24,32,0.18); background: rgba(255,255,255,0.85);" />
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                  <div>
+                    <label for="email" style="display: block; font-weight: 700; margin-bottom: 6px;">Email</label>
+                    <input id="email" name="email" type="email" required style="width: 100%; min-height: 46px; padding: 10px 12px; border: 1px solid rgba(17,24,32,0.18); background: rgba(255,255,255,0.85);" />
+                  </div>
+
+                  <div>
+                    <label for="phone" style="display: block; font-weight: 700; margin-bottom: 6px;">Phone</label>
+                    <input id="phone" name="phone" type="tel" style="width: 100%; min-height: 46px; padding: 10px 12px; border: 1px solid rgba(17,24,32,0.18); background: rgba(255,255,255,0.85);" />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="interest" style="display: block; font-weight: 700; margin-bottom: 6px;">Primary Area of Interest</label>
+                  <select id="interest" name="interest" style="width: 100%; min-height: 46px; padding: 10px 12px; border: 1px solid rgba(17,24,32,0.18); background: rgba(255,255,255,0.85);">
+                    <option>Managed Healthcare IT</option>
+                    <option>Cybersecurity Services</option>
+                    <option>Microsoft Security Solutions</option>
+                    <option>vCISO Services</option>
+                    <option>Compliance & Risk Guidance</option>
+                    <option>Not Sure Yet</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="message" style="display: block; font-weight: 700; margin-bottom: 6px;">Tell Us What You Need</label>
+                  <textarea id="message" name="message" rows="6" style="width: 100%; padding: 10px 12px; border: 1px solid rgba(17,24,32,0.18); background: rgba(255,255,255,0.85); resize: vertical;"></textarea>
+                </div>
+
+                <p style="font-size: 0.9rem; color: #4f5b64;">Please do not submit patient records, medical data, or Protected Health Information through this form.</p>
+
+                <button class="button gold" type="submit" style="width: fit-content;">Submit Request</button>
+              </form>
+            </div>
+
+            <aside style="background: rgba(12, 18, 24, 0.94); border: 1px solid var(--line); padding: 34px; color: var(--white); box-shadow: 0 24px 80px rgba(0,0,0,0.18);">
+              <h2 style="font-size: 1.35rem; line-height: 1.25;">What to Expect</h2>
+              <div class="gold-line" style="margin-top: 18px;"></div>
+              <ul class="check-list">
+                <li>A practical discussion about your current environment</li>
+                <li>Review of your security, identity, and technology concerns</li>
+                <li>Initial guidance on priorities and next steps</li>
+                <li>No pressure, no unnecessary complexity</li>
+              </ul>
+
+              <div style="margin-top: 30px; padding-top: 24px; border-top: 1px solid rgba(217,166,111,0.22);">
+                <h3 style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em;">Prefer to Call?</h3>
+                <p style="margin-top: 10px; color: var(--muted);">You can also reach INNAVARIX directly.</p>
+                <p style="margin-top: 14px;"><a href="tel:18887856119" style="color: var(--gold-soft); font-weight: 700;">888-785-6119</a></p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <a class="brand" href="index.html" aria-label="INNAVARIX home">
+              <img src="images/header_logo.png" alt="INNAVARIX" style="width: 100%; max-width: 360px; height: auto; object-fit: contain;" />
+            </a>
+            <p style="margin-top: 18px; max-width: 340px;">Cybersecurity focused IT and strategic technology leadership for healthcare organizations.</p>
+          </div>
+
+          <div>
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html#services">Services</a></li>
+              <li><a href="index.html#security">Healthcare Security & Compliance</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="index.html#insights">Insights</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Services</h4>
+            <ul>
+              <li>Cybersecurity</li>
+              <li>Managed Healthcare IT</li>
+              <li>vCISO Services</li>
+              <li>Microsoft Security Solutions</li>
+              <li>Strategic Advisory</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="tel:18887856119">888-785-6119</a></li>
+              <li><a href="mailto:info@innavarix.com">info@innavarix.com</a></li>
+              <li>Monday through Friday</li>
+              <li>8:00 AM to 5:00 PM EST</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2026 INNAVARIX. All rights reserved.</span>
+          <span><a href="privacy.html">Privacy Policy</a>&nbsp;&nbsp;&nbsp; <a href="terms.html">Terms of Service</a></span>
+        </div>
+      </div>
+    </footer>
+
+    <a class="floating-call" href="tel:18887856119" aria-label="Call INNAVARIX">☎</a>
+
+    <script>
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+      const mobileAccordions = mobileMenu.querySelectorAll('.mobile-accordion');
+      const mobileAccordionTriggers = mobileMenu.querySelectorAll('.mobile-accordion-trigger');
+
+      mobileMenuToggle.addEventListener('click', () => {
+        const isOpen = mobileMenu.classList.toggle('open');
+        mobileMenuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        mobileMenuToggle.textContent = isOpen ? 'Close' : 'Menu';
+      });
+
+      mobileAccordionTriggers.forEach((trigger) => {
+        trigger.addEventListener('click', () => {
+          const accordion = trigger.closest('.mobile-accordion');
+          const isOpen = accordion.classList.contains('open');
+
+          mobileAccordions.forEach((item) => {
+            item.classList.remove('open');
+            const button = item.querySelector('.mobile-accordion-trigger');
+            if (button) button.setAttribute('aria-expanded', 'false');
+          });
+
+          if (!isOpen) {
+            accordion.classList.add('open');
+            trigger.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      mobileMenuLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('open');
+          mobileMenuToggle.setAttribute('aria-expanded', 'false');
+          mobileMenuToggle.textContent = 'Menu';
+          mobileAccordions.forEach((item) => {
+            item.classList.remove('open');
+            const button = item.querySelector('.mobile-accordion-trigger');
+            if (button) button.setAttribute('aria-expanded', 'false');
+          });
+        });
+      });
+    </script>
+  </div>
+</body>
+</html>
